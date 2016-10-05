@@ -1,0 +1,14 @@
+<div>
+    <div class="title">{{title}}</div>
+    <div class="subTitle">{{subTitle}}</div>
+    <div class="paragraph">
+        <ul>
+            <li class="listItem" ng-repeat="section in bodyText">
+                <div class="sectionHeader">{{section.header}}</div>
+                <div class="sectionBody">{{section.text}}</div>
+            </li>
+        </ul>
+
+    </div>
+    <div class="conclusion">{{conclusion}}</div>
+</div>
