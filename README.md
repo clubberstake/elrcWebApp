@@ -1,11 +1,9 @@
 # elrcWebApp
 
-greg was here
-
-thomas was here
-
-ryan was here
-nate was here 
+<p>greg was here</p>
+<p>thomas was here</p>
+<p>ryan was here</p>
+<p>nate was here </p>
 
 system.out.println("Hello World");
 
