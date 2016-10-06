@@ -7,4 +7,4 @@
 
 system.out.println("Hello World");
 
-printf("Hello World");
+document.write("Hello World");
