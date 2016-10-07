@@ -1,0 +1,23 @@
+{
+    "title": "head title",
+    "subTitle": "a sub title",
+    "bodyText": [
+        {
+            "header": "header text...",
+            "text": "Some texts in a paragraph."
+        },
+        {
+            "header": "header text...",
+            "text": "Some texts in a paragraph."
+        },
+        {
+            "header": "header text...",
+            "text": "Some texts in a paragraph."
+        },
+        {
+            "header": "header text...",
+            "text": "Some texts in a paragraph."
+        }
+    ],
+    "conclusion": "some bottom running text"
+}
