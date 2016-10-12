@@ -1,12 +1,14 @@
 var app = angular.module('elrcWebApp', ['ngRoute']);
 
 app.config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/home', {
+	$routeProvider.when('/home', {
 		templateUrl: 'app/js/home/home.html',
 		controller: 'HomeController'
 	})
-		
-		.otherwise({
-            redirectTo: '/home'
-        });
+		.when('/archive', {
+			templateUrl: 'app/js/archive/archive.html',
+			controller: 'ArchiveController'
+		}).otherwise({
+			redirectTo: '/home'
+		});
 }]);

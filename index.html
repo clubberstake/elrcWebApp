@@ -2,21 +2,22 @@
 <html ng-app="elrcWebApp">
 
 <head>
-    <!-- Angular JS -->
-    <script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
-    <script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+	<!-- Angular JS -->
+	<script src="bower_components/angular/angular.min.js" type="text/javascript"></script>
+	<script src="bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
 
-    <!-- Source Code references -->
-    <script src="app/js/app.js"></script>
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="app/baseView.css">
-    <script src="app/js/home/homeController.js"></script>
+	<!-- Source Code references -->
+	<script src="app/js/app.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="app/baseView.css">
+	<script src="app/js/home/homeController.js"></script>
+	<script src="app/js/archive/archiveController.js"></script>
 </head>
 
 <body class="indexPage" ng-cloak>
-    <div class="divPage">
-        <div class="header">ELRC Radio
-            <span class="socialMediaIcon">
+	<div class="divPage">
+		<div class="header">ELRC Radio
+			<span class="socialMediaIcon">
             <a title="ELRC Twitter" href="https://twitter.com/elrcradio" target="_blank">
                 <img alt="follow us on Twitter" src='app/img/twitter40x40.png'></a>
             <a title="ELRC Facebook" href="https://www.facebook.com/ELRC-The-Electric-Bean-190679221290/?fref=tsm" target="_blank">
@@ -24,10 +25,10 @@
                 <a title = "ELRC Youtube Channel" href = 'http://youtube.com' target= "_blank">
                 <img src='app/img/YouTube-icon-full_color.png' /></a>
         </span>
-        </div>
-        <div class="navigationBar">
-            <span class="navigationBarItem"><a href="index.html"><img src='app/img/ELRC_Logo.png'/></a></span>
-            <span class="navigationBarItem">
+		</div>
+		<div class="navigationBar">
+			<span class="navigationBarItem"><a href="#/home"><img src='app/img/ELRC_Logo.png'/></a></span>
+			<span class="navigationBarItem">
                 <div class=dropdown>
                 <div class="dropdown">
 <button onclick="myFunction()" class="dropbtn">Radio Channels</button>
@@ -39,16 +40,16 @@
                  </div>
                 </div>
                 </span>
-            <span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
-            <span class="navigationBarItem">Arcives</span>
-            <span class="navigationBarTheme">Some Motto</span>
-        </div>
-        <div class="divView" ng-view></div>
-    </div>
+			<span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
+			<span class="navigationBarItem"><a href='#/archive'>Arcives</span>
+			<span class="navigationBarTheme">Some Motto</span>
+		</div>
+		<div class="divView" ng-view></div>
+	</div>
 
 
 
-    <script>
+	<script>
 /* When the user clicks on the button,
 toggle between hiding and showing the dropdown content */
 function myFunction() {
