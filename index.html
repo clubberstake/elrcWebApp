@@ -15,23 +15,61 @@
 
 <body class="indexPage" ng-cloak>
     <div class="divPage">
-        <div class="header">Some Title
+        <div class="header">ELRC Radio
             <span class="socialMediaIcon">
-            <a title="follow me on Twitter" href="https://twitter.com" target="_blank">
-                <img alt="follow me on Twitter" src='app/img/twitter40x40.png'></a>
-            <a title="connect with me on LinkedIn" href="https://www.linkedin.com" target="_blank">
-                <img alt="connect with me on LinkedIn" src='app/img/Linkedin.jpg'></a>
+            <a title="ELRC Twitter" href="https://twitter.com/elrcradio" target="_blank">
+                <img alt="follow us on Twitter" src='app/img/twitter40x40.png'></a>
+            <a title="ELRC Facebook" href="https://www.facebook.com/ELRC-The-Electric-Bean-190679221290/?fref=tsm" target="_blank">
+                <img alt="ELRC FaceBook" src='app/img/facebook_logo.png'></a>
+                <a title = "ELRC Youtube Channel" href = 'http://youtube.com' target= "_blank">
+                <img src='app/img/YouTube-icon-full_color.png' /></a>
         </span>
         </div>
         <div class="navigationBar">
-            <span class="navigationBarItem">Home</span>
-            <span class="navigationBarItem">Podcasts</span>
+            <span class="navigationBarItem"><a href="index.html"><img src='app/img/ELRC_Logo.png'/></a></span>
+            <span class="navigationBarItem">
+                <div class=dropdown>
+                <div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Radio Channels</button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="#Channel 1">Channel 1</a>
+                    <a href="#Channel 2">Channel 2</a>
+                    <a href="#Channel 3">Channel 3</a>
+                   </div>
+                 </div>
+                </div>
+                </span>
             <span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
-            <span class="navigationBarItem">Contact</span>
+            <span class="navigationBarItem">Arcives</span>
             <span class="navigationBarTheme">Some Motto</span>
         </div>
         <div class="divView" ng-view></div>
     </div>
+
+
+
+    <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 
 </html>
