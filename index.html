@@ -10,8 +10,10 @@
 	<script src="app/js/app.js"></script>
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="app/baseView.css">
+  <link rel="stylesheet" href="app/login.css">
 	<script src="app/js/home/homeController.js"></script>
 	<script src="app/js/archive/archiveController.js"></script>
+  <script src="app/js/login/loginController.js"></script>
 </head>
 
 <body class="indexPage" ng-cloak>
@@ -33,7 +35,7 @@
                 <div class="dropdown">
 <button onclick="myFunction()" class="dropbtn">Radio Channels</button>
                   <div id="myDropdown" class="dropdown-content">
-                    <a href="#Channel 1">Channel 1</a>
+                    <a href="#/login">Channel 1</a>
                     <a href="#Channel 2">Channel 2</a>
                     <a href="#Channel 3">Channel 3</a>
                    </div>
@@ -41,7 +43,7 @@
                 </div>
                 </span>
 			<span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
-			<span class="navigationBarItem"><a href='#/archive'>Arcives</span>
+			<span class="navigationBarItem"><a href='#/archive'>Archives</span>
 			<span class="navigationBarTheme">Some Motto</span>
 		</div>
 		<div class="divView" ng-view></div>

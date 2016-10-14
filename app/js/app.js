@@ -5,9 +5,13 @@ app.config(['$routeProvider', function ($routeProvider) {
 		templateUrl: 'app/js/home/home.html',
 		controller: 'HomeController'
 	})
+	.when('/login', {
+			templateUrl: 'app/js/login/login.html',
+			controller: 'LoginController'
+	})
 		.when('/archive', {
 			templateUrl: 'app/js/archive/archive.html',
-			controller: 'ArchiveController'
+			controller: 'ArchiveController'	
 		}).otherwise({
 			redirectTo: '/home'
 		});
