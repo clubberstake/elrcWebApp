@@ -1,4 +1,4 @@
-app.controller('HomeController', ['$scope', '$location', 'HomeService',
+app.controller('PodcastController', ['$scope', '$location', 'PodcastService',
     function ($scope, $location, HomeService) {
 
         HomeService.get().then(function (data) {
@@ -11,10 +11,10 @@ app.controller('HomeController', ['$scope', '$location', 'HomeService',
     }]);
 
 
-app.factory('HomeService', ['$http', function ($http) {
+app.factory('PodcastService', ['$http', function ($http) {
 
     var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/home.json').success(function (data) {
+        var promise = $http.get('app/JSON/podcastJSON.json').success(function (data) {
             return data;
         });
 
