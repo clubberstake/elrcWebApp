@@ -5,6 +5,10 @@ app.config(['$routeProvider', function ($routeProvider) {
 		templateUrl: 'app/js/home/home.html',
 		controller: 'HomeController'
 	})
+	.when('/podcast', {
+			templateUrl: 'app/js/podcast/podcast.html',
+			controller: 'PodcastController'
+	})
 	.when('/login', {
 			templateUrl: 'app/js/login/login.html',
 			controller: 'LoginController'
