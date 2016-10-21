@@ -3,19 +3,7 @@
     "subTitle": "a sub title",
     "bodyText": [   //bodyText is an array
         {
-            "header": "header text...",
-            "text": " "
-        },
-        {
-            "header": "header text...",
-            "text": "  "
-        },
-        {
-            "header": "header text...",
-            "text": " "
-        },
-        {
-            "header": "Podcast Description",
+            "header": "Admin Login",
             "text": " "
         }
     ],

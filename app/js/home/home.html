@@ -1,34 +1,42 @@
+<script>
+    var w = 1200;
+     document.getElementById("myLink").innerHTML=w;
+ </script>
 <div>
-    <div class= scrollText><marquee>{{scrollText}}</marquee></div>
-    <div class="title">{{title}}</div>
+	<marquee class=scrollText>{{scrollText}}</marquee>
+	<div class="title">{{title}}</div>
 
-    <div>
-        <div class=featured>
-            <iframe width="320" " height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe></div>
-        <div class= featured > <iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw" frameborder="0"
-                allowfullscreen></iframe>
-        </div>
-        <div class=featured>
-            <iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe></div> 
-    </div>
-     <div>
-        <div class=featured><iframe width="320"  height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0"
-                allowfullscreen></iframe></div>
-        <div class=featured>
-            <iframe width="320 " " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe></div>
-        <div class=featured><iframe width="320 "  height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0"
-                allowfullscreen></iframe>
-        </div>
-    </div>
-    <div class="subTitle">{{subTitle}}</div>
-    <div class="paragraph">
-        <ul>
-            <li class="listItem" ng-repeat="section in bodyText">
-                <div class="sectionHeader">{{section.header}}</div>
-                <div class="sectionBody">{{section.text}}</div>
-            </li>
-        </ul>
+	<div>
+		<div class=featured>
+			<iframe  width=320 height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+		</div>
+		<div class=featured>
+			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
+		</div>
+		<div class=featured>
+			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
+		</div>
+	</div>
+	<div>
+		<div class=featured>
+			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
+		</div>
+		<div class=featured>
+			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
+		</div>
+		<div class=featured>
+			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
+		</div>
+	</div>
+	<div class="subTitle ">{{subTitle}}</div>
+	<div class="paragraph ">
+		<ul>
+			<li class="listItem " ng-repeat="section in bodyText ">
+				<div class="sectionHeader ">{{section.header}}</div>
+				<div class="sectionBody ">{{section.text}}</div>
+			</li>
+		</ul>
 
-    </div>
-    <div class="conclusion">{{conclusion}}</div>
+	</div>
+	<div class="conclusion ">{{conclusion}}</div>
 </div>
