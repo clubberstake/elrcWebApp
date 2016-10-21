@@ -1,0 +1,24 @@
+.profilePic{
+    border-radius:50%;
+    border:5px solid silver;
+    margin-left:10%;
+    margin-top:5%;
+    margin-bottom:3%;
+    position:inline-block;
+}
+.podcastBioInput{
+    color:silver;
+    font-size:175%;
+    margin-top:1%;
+    margin-bottom:1%;
+    margin-left:3%;
+}
+.podcastDescription{
+
+}
+.podcastChannelContainer{
+
+}
+.podcastChannelVideos{
+    margin-top:4%;
+}
