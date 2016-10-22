@@ -16,7 +16,12 @@ app.config(['$routeProvider', function ($routeProvider) {
 		.when('/archive', {
 			templateUrl: 'app/js/archive/archive.html',
 			controller: 'ArchiveController'	
-		}).otherwise({
+		})
+		.when('/newChannel', {
+			templateUrl: 'app/js/newChannel/newChannel.html',
+			controller: 'newChannelController'	
+		})
+		.otherwise({
 			redirectTo: '/home'
 		});
 }]);
