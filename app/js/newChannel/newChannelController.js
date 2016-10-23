@@ -44,3 +44,9 @@ function adminProc(evt, adminProc) {
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
+
+
+function noArtist()
+{
+  alert("A new artist must be created before continuing.");
+}

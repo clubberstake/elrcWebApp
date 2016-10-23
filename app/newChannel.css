@@ -1,5 +1,9 @@
-body {font-family: "Lato", sans-serif;}
-
+body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.action{
+        font-size: 24px;
+        position: relative;
+        left: 35%;
+        }
 ul.tab {
     list-style-type: none;
     margin: 0;
@@ -8,7 +12,6 @@ ul.tab {
     border: 10px solid darkred;
     background-color: #970E0E ;
 }
-
 /* Float the list items side by side */
 ul.tab li {float: left;}
 
@@ -22,7 +25,13 @@ ul.tab li a {
     transition: 0.3s;
     font-size: 17px;
 }
-
+#rButton, .exist
+{
+  display: inline;
+}
+td{padding: 5px;}
+table{width:100%}
+textarea{resize:none;}
 /* Change background color of links on hover */
 ul.tab li a:hover {
     background-color: #660000;
@@ -49,3 +58,7 @@ ul.tab li a:focus, .active {
 }
 
 .topright:hover {color: red;}
+#create{
+        position: relative;
+        left:40%;
+        }

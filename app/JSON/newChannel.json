@@ -1,13 +1,4 @@
 {
-    "title": "Admin Login",
-    "subTitle": "a sub title",
-    "bodyText": [   //bodyText is an array
-        {
-            "header": "Admin Login",
-            "text": " "
-        }
-    ],
-    "scrollText": "Some Scrolling Text....",
-    
-    "conclusion": "some bottom running text"
+  "title": "What do you want to do?",
+ "name": "New Channel: "
 }

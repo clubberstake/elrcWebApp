@@ -1,4 +1,5 @@
 <div>
+ <div class = "action"> {{title}}</div>
 <ul class="tab">
   <li><a href="javascript:void(0)" class="tablinks" onclick="adminProc(event, 'newChannel')" id="defaultOpen">New Channel</a></li>
   <li><a href="javascript:void(0)" class="tablinks" onclick="adminProc(event, 'newPodcast')">New Podcast</a></li>
@@ -8,19 +9,95 @@
 <div id="newChannel" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <h3>New Channel</h3>
-  <p>Create New Channel Here</p>
+<table class=newInfo>
+  <tr>
+    <td>
+ <div class=label> 
+ Channel Name: 
+ <input type = "text" name= "channelName" class= "cText" maxlength="20" placeholder="Enter Channel Name"/>
+</div>
+    </td>
+    <td>
+<div class=exist> 
+ Does the artist exist?: 
+ <form id=rButton>
+   <input type="radio" name = "yesno" value = "Yes"/> Yes
+    <input type="radio" onclick="noArtist()" name = "yesno" value = "No"/> No
+ </form>
+</div>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Channel Description: </br>
+      <textarea placeholder="Describe the new channel." rows=4  cols=37></textarea>
+      </td>
+      <!--<td>
+        Search Artist: 
+        <input type="search" placeholder="Search Artist..."/>
+      </td>-->
+      <td>
+        Choose Artist: 
+        <select>
+          <option value="" disabled selected>Artist Not Chosen</option>
+          <option value=artist1>Artist 1 </option>
+          <option value=artist2>Artist 2 </option>
+          <option value=artist3>Artist 3 </option>
+        </select>
+      </td>
+  </tr>
+</table>
+<input id=create type="submit" value="Create"/>
 </div>
 
 <div id="newPodcast" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <h3>New Podcast(s)</h3>
-  <p>Upload new podcasts here.</p>
+  <div class=label> 
+    <table class=newInfo>
+      <tr>
+        <td>
+   Podcast Name: 
+ <input type = "text" name= "podcastName" class= "pText" maxlength="20" placeholder="Enter Podcast Name"/>
+        </td>
+        <td>
+          <div class=exist> 
+ Does the artist exist?: 
+ <form id=rButton>
+   <input type="radio" name = "yesno" value = "Yes"/> Yes
+    <input type="radio" onclick="noArtist()" name = "yesno" value = "No"/> No
+ </form>
+</div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          Podcast URL: <input type="text" placeholder="Podcast URL"/>
+        </td>
+      </tr>
+    </table>
+    <input id=create type="submit" value="Create"/>
+</div>
 </div>
 
 <div id="newArtist" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
   <h3>New Artist</h3>
-  <p>Create a new Artist here.</p>
+  <table>
+    <tr>
+ <div class=label> 
+   <td id=fName>
+        Artist First Name:
+        <input type = "text" name= "artistFName" class= "fText" maxlength="30" placeholder="Enter Artist First Name"/>
+    </td>
+    <td id=lName>
+      Artist Last Name: 
+      <input type = "text" name= "lName" class= "lText" maxlength="30" placeholder="Enter Artist Last Name"/>
+    </td>
+</div>
+    </tr>
+  </table>
+  <input id=create type="submit" value="Create"/>
 </div>
 
 </div>
