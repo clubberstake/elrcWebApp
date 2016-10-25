@@ -36,6 +36,7 @@
     position: absolute;
     right: 0;
     margin-right: 30px;
+    margin-top: 1%;
 }
 
 .navigationBar{
@@ -47,11 +48,21 @@
     background-image: linear-gradient(to bottom, #404040, black);
     display: flex;
     flex-flow: row;
-    align-items: flex-end; 
+    align-items: flex-end;
+    list-style: none;
+    margin:0;
+    padding: 0;
+    text-align:center;
+
 }
 .navigationBar a{
     text-decoration: none;
     color: silver;
+    display: inline-block;
+    padding:4%;
+}
+.navigationBar li{
+    display: inline;
 }
 
 .navigationBar .navigationBarItem{
@@ -120,3 +131,10 @@
  }
 
 .show {display:block;}
+
+@media (max-width: 767px) {
+    #nav li {
+        display: block;
+        width: 100%;
+    }
+}
