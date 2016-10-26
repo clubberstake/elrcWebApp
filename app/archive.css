@@ -1,5 +1,7 @@
 #videos{
-    width: 170%;
+    top: 300;
+    width: 200%;
     left: 20%;
     position: relative;
+    z-index:  "-1";
 }
