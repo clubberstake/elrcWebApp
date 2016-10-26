@@ -117,11 +117,7 @@
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-<<<<<<< HEAD
-    
-=======
     z-index: 1;
->>>>>>> fb69c5c35a8518a7d39d12ebe2b355be3d9d8b65
 }
 
 .dropdown-content a {
@@ -135,7 +131,7 @@
 .dropdown a:hover {background-color: #660000}
 .dropdown:hover {
     display: block;
-    margin-top: 0; 
+    margin-top: 0;
  }
 
 .show {display:block;}
