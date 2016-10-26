@@ -52,7 +52,7 @@
 
 <div id="newPodcast" class="tabcontent">
   <span onclick="this.parentElement.style.display='none'" class="topright">x</span>
-  <h3>New Podcast(s)</h3>
+  <h3>New Podcast</h3>
   <div class=label> 
     <table class=newInfo>
       <tr>
@@ -62,10 +62,10 @@
         </td>
         <td>
           <div class=exist> 
- Does the artist exist?: 
+ Does the channel exist?: 
  <form id=rButton>
    <input type="radio" name = "yesno" value = "Yes"/> Yes
-    <input type="radio" onclick="noArtist()" name = "yesno" value = "No"/> No
+    <input type="radio" onclick="noChannel()" name = "yesno" value = "No"/> No
  </form>
 </div>
         </td>
@@ -73,6 +73,21 @@
       <tr>
         <td>
           Podcast URL: <input type="text" placeholder="Podcast URL"/>
+        </td>
+         <td>
+        Choose Channel: 
+        <select>
+          <option value="" disabled selected>Channel Not Chosen</option>
+          <option value=Channel1>Channel 1 </option>
+          <option value=Channel2>Channel 2 </option>
+          <option value=Channel3>Channel 3 </option>
+        </select>
+      </td>
+      </tr>
+      <tr>
+        <td>
+        Podcast Description: </br>
+        <textarea placeholder="Describe the new podcast" rows=4  cols=37></textarea>
         </td>
       </tr>
     </table>
@@ -95,6 +110,17 @@
       <input type = "text" name= "lName" class= "lText" maxlength="30" placeholder="Enter Artist Last Name"/>
     </td>
 </div>
+    </tr>
+    <tr>
+      <td>
+        Description/Bio: </br>
+         <textarea placeholder="Describe the new artist" rows=4  cols=37></textarea>
+      </td>
+      <td>
+        DJ Name: 
+        <input type = "text" name= "DJName" class= "DJText" maxlength="30" placeholder="Enter Artist DJ Name"/>
+
+      </td>
     </tr>
   </table>
   <input id=create type="submit" value="Create"/>
