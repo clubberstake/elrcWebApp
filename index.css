@@ -55,12 +55,10 @@
 .navigationBar a{
     text-decoration: none;
     color: silver;
-    padding:4%;
+    padding: 2%;
 }
 .navigationBar ul{
     list-style: none;
-    margin: 0 2px;
-    padding: 0;
     display: flex;
     justify-content: space-around;
 }
@@ -74,7 +72,7 @@
     color: silver;
     font-size: 24px;
     padding: 2.5%;
-    margin-top: 10px;
+    margin-top: 5px;
     white-space: nowrap;
 }
 
@@ -87,7 +85,7 @@
     color: silver;
     font-size: 18px;
     padding: 10px;
-    margin-top: 10px;
+    /*margin-top: 10px;*/
     margin-right: 30px;
     font-style: italic;
     position: absolute;
@@ -119,6 +117,7 @@
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
 }
 
 .dropdown-content a {
@@ -135,10 +134,3 @@
  }
 
 .show {display:block;}
-
-@media (max-width: 767px) {
-    #nav li {
-        display: block;
-        width: 100%;
-    }
-}
