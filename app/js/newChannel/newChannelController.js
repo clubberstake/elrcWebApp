@@ -50,3 +50,8 @@ function noArtist()
 {
   alert("A new artist must be created before continuing.");
 }
+
+function noChannel()
+{
+  alert("A new channel must be created before continuing.");
+}

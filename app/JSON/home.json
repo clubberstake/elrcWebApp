@@ -1,25 +1,6 @@
 {
-    "title": "Featured Podcast",
-    "subTitle": "a sub title",
-    "bodyText": [   //bodyText is an array
-        {
-            "header": "header text...",
-            "text": " "
-        },
-        {
-            "header": "header text...",
-            "text": "  "
-        },
-        {
-            "header": "header text...",
-            "text": " "
-        },
-        {
-            "header": "Podcast Description",
-            "text": " "
-        }
-    ],
-    "scrollText": "Some Scrolling Text....",
-    
-    "conclusion": "some bottom running text"
+    "title": "Home",
+    "h": 100,
+    "w": 178,
+    "scrollText": "Live Podcast"
 }
