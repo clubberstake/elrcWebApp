@@ -10,7 +10,14 @@ ul.tab {
     padding: 0;
     overflow: hidden;
     border: 10px solid darkred;
-    background-color: #970E0E ;
+    /*background-color: #970E0E ;*/
+    background: #404040;
+    background-image: -webkit-linear-gradient(top, #404040, black);
+    background-image: -moz-linear-gradient(top, #404040, black);
+    background-image: -ms-linear-gradient(top, #404040, black);
+    background-image: -o-linear-gradient(top, #404040, black);
+    background-image: linear-gradient(to bottom, #404040, black);
+
 }
 /* Float the list items side by side */
 ul.tab li {float: left;}
@@ -18,7 +25,7 @@ ul.tab li {float: left;}
 /* Style the links inside the list items */
 ul.tab li a {
     display: inline-block;
-    color: black;
+    color: silver;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -29,8 +36,8 @@ ul.tab li a {
 {
   display: inline;
 }
-td{padding: 5px;}
-table{width:100%}
+.content{padding: 5px;}
+.newInfo{width:99%}
 textarea{resize:none;}
 /* Change background color of links on hover */
 ul.tab li a:hover {
@@ -62,3 +69,8 @@ ul.tab li a:focus, .active {
         position: relative;
         left:40%;
         }
+
+#reset{
+    position: relative;
+    left: 35%;
+}

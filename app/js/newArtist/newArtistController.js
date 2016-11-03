@@ -1,4 +1,4 @@
-app.controller('newChannelController', ['$scope', '$location', 'newChannelService',
+app.controller('newArtistController', ['$scope', '$location', 'newArtistService',
     function ($scope, $location, HomeService) {
 
         HomeService.get().then(function (data) {
@@ -11,10 +11,10 @@ app.controller('newChannelController', ['$scope', '$location', 'newChannelServic
     }]);
 
 
-app.factory('newChannelService', ['$http', function ($http) {
+app.factory('newArtistService', ['$http', function ($http) {
 
     var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/newChannel.json').success(function (data) {
+        var promise = $http.get('app/JSON/newArtist.json').success(function (data) {
             return data;
         });
 
@@ -26,5 +26,4 @@ app.factory('newChannelService', ['$http', function ($http) {
     }
 
 }]);
-
 

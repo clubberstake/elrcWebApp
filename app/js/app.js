@@ -21,6 +21,14 @@ app.config(['$routeProvider', function ($routeProvider) {
 			templateUrl: 'app/js/newChannel/newChannel.html',
 			controller: 'newChannelController'	
 		})
+		.when('/newPodcast', {
+			templateUrl: 'app/js/newPodcast/newPodcast.html',
+			controller: 'newPodcastController'	
+		})
+		.when('/newArtist', {
+			templateUrl: 'app/js/newArtist/newArtist.html',
+			controller: 'newArtistController'	
+		})
 		.otherwise({
 			redirectTo: '/home'
 		});
