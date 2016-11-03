@@ -1,39 +1,21 @@
-<div class="title">{{title}}</div>
-<div>
-	<marquee class=scrollText>{{scrollText}}</marquee>
-	
+	<div>
+	 <table class="homeTableHeader">
+        <tr>
+            <th class="homeHeader"> THE FEATURED PODCAST </th>
+        <tr>
+    </table>
+	</div>
 
 	<div>
-		<div class=featured>
-			<iframe  width=320 height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-		</div>
-		<div class=featured>
-			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
-		</div>
-		<div class=featured>
-			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
-		</div>
+	 <table class="featuredHeader">
+        <tr>
+            <th class="featuredTitle"> TITLE OF THE PODCAST</th>
+        <tr>
+    </table>
 	</div>
-	<div>
-		<div class=featured>
-			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
-		</div>
-		<div class=featured>
-			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
-		</div>
-		<div class=featured>
-			<iframe width="320 " height="180 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0 " allowfullscreen></iframe>
-		</div>
-	</div>
-	<div class="subTitle ">{{subTitle}}</div>
-	<div class="paragraph ">
-		<ul>
-			<li class="listItem " ng-repeat="section in bodyText ">
-				<div class="sectionHeader ">{{section.header}}</div>
-				<div class="sectionBody ">{{section.text}}</div>
-			</li>
-		</ul>
 
+	<div ="featuredVideoContainer">
+		<div class="featuredVideo" align="center">
+			<iframe  align="middle" width=569 height="320 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+		</div>
 	</div>
-	<div class="conclusion ">{{conclusion}}</div>
-</div>
