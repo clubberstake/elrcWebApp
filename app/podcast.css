@@ -175,6 +175,10 @@ th{
     width:100%;
     align-content: center;
 }
+.mainVideo{
+    margin-left:2%;
+    margin-bottom: 1%;
+}
 .mainBioVideoTitle{
     color:silver;
     font-size:125%;

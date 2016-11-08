@@ -58,7 +58,8 @@ text-shadow:0 1px 0 black,
     align-content: center;
 }
 .featuredVideo{
-    margin-bottom: 5%;
+    margin-left:2%;
+    margin-bottom: 1%;
 }
 iframe{
     border:black 3px solid;
@@ -69,6 +70,18 @@ iframe{
                0 1px 0 silver,
                0 2px 0 silver,
                0 0 3px silver;
+}
+.featuredDescription{
+    width:100%;
+}
+.featuredDescriptionBox{
+    color:silver;
+    text-align:center;
+    padding-top:1%;
+    font-size:80%;
+    text-shadow:0 1px 0 black,
+               0 2px 0 black,
+               0 3px 0 black;
 }
 .featuredHomepageVideos{
     margin-top:2%;
