@@ -1,11 +1,23 @@
+<div class=choice>
+<input type="radio" name = "newEdit" value = "New"/> New
+<input type="radio" name = "newEdit" value = "Edit"/> Edit <br/>
+
+Podcast to edit: &nbsp;
+          <select>
+          <option value="" disabled selected>Podcast Not Chosen</option>
+          <option value=artist1>Podcast 1 </option>
+          <option value=artist2>Podcast 2 </option>
+          <option value=artist3>Podcast 3 </option>
+        </select>
+</div>
 <div class = "action"> {{title}}</div>
 <ul class="tab">
-  <li><a href="#/newChannel" class="tablinks"  >New/Edit Channel</a></li>
-  <li><a href="#/newPodcast" class="tablinks" >New/Edit Podcast</a></li>
-  <li><a href="#/newArtist" class="tablinks" >New/Edit Artist</a></li>
+  <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
+   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
+   <li id=current><a href="#/newChannel" class="tablinks"> Channel</a></li>
 </ul>
 
-  <h3>New Podcast</h3>
+  <h3>New/Edit Podcast</h3>
   <div class=label> 
     <table class=newInfo>
       <tr>
@@ -18,7 +30,7 @@
  Does the channel exist?: 
  <form id=rButton>
    <input type="radio" name = "yesno" value = "Yes"/> Yes
-    <input type="radio" onclick="noChannel()" name = "yesno" value = "No"/> No
+    <input type="radio" onclick= noChannel() name = "yesno" value = "No"/> No
  </form>
 </div>
         </td>
@@ -45,4 +57,7 @@
       </tr>
     </table>
     <input id=create type="submit" value="Create"/>
+    <input id=reset type="reset" value="Clear"/>
 </div>
+
+<script> function noChannel{alert("Each Podcast must have Channel");}</script>

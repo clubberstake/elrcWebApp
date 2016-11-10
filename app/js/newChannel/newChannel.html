@@ -1,11 +1,22 @@
+<div class=choice>
+<input type="radio" name = "newEdit" value = "New"/> New
+<input type="radio" name = "newEdit" value = "Edit"/> Edit <br/>
 
+Channel to edit: &nbsp;
+          <select>
+          <option value="" disabled selected>Channel Not Chosen</option>
+          <option value=artist1>Channel 1 </option>
+          <option value=artist2>Channel 2 </option>
+          <option value=artist3>Channel 3 </option>
+        </select>
+</div>
  <div class = "action"> {{title}}</div>
 <ul class="tab">
-  <li><a href="#/newChannel" class="tablinks"  >New/Edit Channel</a></li>
-  <li><a href="#/newPodcast" class="tablinks" >New/Edit Podcast</a></li>
-  <li><a href="#/newArtist" class="tablinks" >New/Edit Artist</a></li>
+   <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
+   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
+   <li id=current><a href="#/newChannel" class="tablinks"> Channel</a></li>
 </ul>
-  <h3>New Channel</h3>
+  <h3>New/Edit Channel</h3>
 <table class=newInfo>
   <tr>
     <td class=content>
@@ -41,5 +52,7 @@
   </tr>
 </table>
 <input id=create type="submit" value="Create"/>
+<input id=reset type="reset" value="Clear"/>
+
 
 

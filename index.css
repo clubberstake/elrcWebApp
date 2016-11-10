@@ -114,7 +114,10 @@
 
 }
 
-.dropdown a:hover {background-color: #660000}
+.dropdown a:hover 
+{
+    background-color: #660000;
+ }
 .dropdown:hover {
     display: block;
     margin-top: 0;
