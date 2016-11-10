@@ -28,14 +28,14 @@
 <body class="indexPage" ng-cloak>
 	<div class="divPage">
 		<div class="header"><span class="navigationBarItem"><a href="#/home"><img src='app/img/ELRC_Logo.png'/></a></span>ELRC Radio
- 			<span class="socialMediaIcon">
+ 			<!--<span class="socialMediaIcon">
             <a title="ELRC Twitter" href="https://twitter.com/elrcradio" target="_blank">
                 <img alt="follow us on Twitter" src='app/img/twitter40x40.png'></a>
             <a title="ELRC Facebook" href="https://www.facebook.com/ELRC-The-Electric-Bean-190679221290/?fref=tsm" target="_blank">
                 <img alt="ELRC FaceBook" src='app/img/fb_icon.png'></a>
             <a title = "ELRC Youtube Channel" href = 'http://youtube.com' target= "_blank">
                 <img src='app/img/YouTube.png' /></a>
-        </span>
+        </span>-->
 		</div>
 		<div class="navigationBar">
 			<span class="navigationBarItem">
@@ -48,11 +48,26 @@
                 </span>
 			<span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
 			<span class="navigationBarItem"><a href='#/archive'>Archives</a></span>
-      <span class="navigationBarItem"><a href="/app/img/ELRCapp.pdf" download="ELRC Application">Apply</a></span>
+      <span class="navigationBarItemRight" ><a href="/app/img/ELRCapp.pdf" download="ELRC Application">Join the Club</a></span>
 
 			</div>
 		<div class="divView" ng-view></div>
 	</div>
+  	<div class="container">
+      
+      </div>
+	<aside id="sticky-social">
+		<ul>
+			<li><a href="https://www.facebook.com/ELRC-The-Electric-Bean-190679221290/?fref=tsm" class="facebook" target="_blank"><span>Facebook</span>
+                    <img alt="ELRC FaceBook" src='app/img/fb_icon.png'></a></li>
+			<li><a href="https://twitter.com/elrcradio" class="twitter" target="_blank"><span>Twitter</span>
+                    <img alt="follow us on Twitter" src='app/img/twitter40x40.png'></a></li>          
+			<li><a href="https://www.youtube.com/channel/UC69B-7VvtARQk6SQMY5vfBw" class= "youtube" target="_blank"><span>YouTube</span>
+                   <img src='app/img/YouTube.png' /></a></li>
+			 
+		</ul>
+	</aside>
+
 
 
 
