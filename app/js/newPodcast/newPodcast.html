@@ -13,8 +13,8 @@ Podcast to edit: &nbsp;
 <div class = "action"> {{title}}</div>
 <ul class="tab">
   <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
+  <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
    <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
-   <li id=current><a href="#/newChannel" class="tablinks"> Channel</a></li>
 </ul>
 
   <h3>New/Edit Podcast</h3>
@@ -27,10 +27,10 @@ Podcast to edit: &nbsp;
         </td>
         <td class=content>
           <div class=exist> 
- Does the channel exist?: 
+ Does the Show exist?: 
  <form id=rButton>
    <input type="radio" name = "yesno" value = "Yes"/> Yes
-    <input type="radio" onclick= noChannel() name = "yesno" value = "No"/> No
+    <input type="radio" onclick= noShow() name = "yesno" value = "No"/> No
  </form>
 </div>
         </td>
@@ -40,12 +40,12 @@ Podcast to edit: &nbsp;
           Podcast URL: <input type="text" placeholder="Podcast URL"/>
         </td>
         <td class=content>
-        Choose Channel: 
+        Choose Show: 
         <select>
-          <option value="" disabled selected>Channel Not Chosen</option>
-          <option value=Channel1>Channel 1 </option>
-          <option value=Channel2>Channel 2 </option>
-          <option value=Channel3>Channel 3 </option>
+          <option value="" disabled selected>Show Not Chosen</option>
+          <option value=Show1>Show 1 </option>
+          <option value=Show2>Show 2 </option>
+          <option value=Show3>Show 3 </option>
         </select>
       </td>
       </tr>
@@ -60,4 +60,4 @@ Podcast to edit: &nbsp;
     <input id=reset type="reset" value="Clear"/>
 </div>
 
-<script> function noChannel{alert("Each Podcast must have Channel");}</script>
+<script> function noShow{alert("Each Podcast must have Show");}</script>
