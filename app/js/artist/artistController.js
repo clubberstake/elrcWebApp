@@ -1,4 +1,4 @@
-app.controller('artistController', ['$scope', '$location', 'artistService',
+app.controller('ArtistController', ['$scope', '$location', 'ArtistService',
     function ($scope, $location, HomeService) {
 
         HomeService.get().then(function (data) {
@@ -11,10 +11,10 @@ app.controller('artistController', ['$scope', '$location', 'artistService',
     }]);
 
 
-app.factory('artistService', ['$http', function ($http) {
+app.factory('ArtistService', ['$http', function ($http) {
 
     var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/artistJSON.json').success(function (data) {
+        var promise = $http.get('app/JSON/rtistJSON.json').success(function (data) {
             return data;
         });
 
