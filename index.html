@@ -13,9 +13,10 @@
   <link rel="stylesheet" href="app/home.css">
   <link rel="stylesheet" href="app/login.css">
   <link rel="stylesheet" href="app/podcast.css">
-   <link rel="stylesheet" href="app/podcast.css">
-    <link rel="stylesheet" href="app/newChannel.css">
-    <link rel="stylesheet" href="app/archive.css">
+  <link rel="stylesheet" href="app/podcast.css">
+  <link rel="stylesheet" href="app/newChannel.css">
+  <link rel="stylesheet" href="app/archive.css">
+  <link rel="stylesheet" href="app/artist.css">
 	<script src="app/js/home/homeController.js"></script>
 	<script src="app/js/archive/archiveController.js"></script>
   <script src="app/js/login/loginController.js"></script>
@@ -23,6 +24,7 @@
   <script src="app/js/newChannel/newChannelController.js"></script>
   <script src="app/js/newPodcast/newPodcastController.js"></script>
   <script src="app/js/newArtist/newArtistController.js"></script>
+  <script src="app/js/artist/artistController.js"></script>
 </head>
 
 <body class="indexPage" ng-cloak>
@@ -39,14 +41,14 @@
 		</div>
 		<div class="navigationBar">
 			<span class="navigationBarItem">
-                <div onclick="myFunction()" class="dropbtn">Radio Channels</div>
+                <div onclick="myFunction()" class="dropbtn">Radio Shows</div>
                   <div id="myDropdown" class="dropdown-content">
-                    <a href="#/podcast">Channel 1</a>
-                    <a href="#/podcast">Channel 2</a> 
-                    <a href="#/podcast">Channel 3</a> 
+                    <a href="#/podcast">Show 1</a>
+                    <a href="#/podcast">Show 2</a> 
+                    <a href="#/podcast">Show 3</a> 
                    </div>
                 </span>
-			<span class="navigationBarItem"><a href='https://blackboard.laroche.edu' target="_blank">Blackboard</a></span>
+			<span class="navigationBarItem"><a href='#/artist'>Artists</a></span>
 			<span class="navigationBarItem"><a href='#/archive'>Archives</a></span>
       <span class="navigationBarItemRight" ><a href="/app/img/ELRCapp.pdf" download="ELRC Application">Join the Club</a></span>
 
