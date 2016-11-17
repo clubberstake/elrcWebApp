@@ -1,4 +1,13 @@
-<div class=choice>
+<div class = "action"> {{title}}</div>
+  
+</table>
+<ul class="tab">
+ <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
+  <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
+   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
+</ul>
+  <h3 class="title">Artist</h3>
+  <div class=choice>
 <input type="radio" name = "newEdit" value = "New" ng-model="isEditingArtist" ng-value="false"/> New
 <input type="radio" name = "newEdit" value = "Edit" ng-model="isEditingArtist" ng-value="true"/> Edit <br/>
 
@@ -10,15 +19,6 @@
           <option value=artist3>Artist 3 </option>
         </select>
 </div>
-<div class = "action"> {{title}}</div>
-  
-</table>
-<ul class="tab">
- <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
-  <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
-   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
-</ul>
-  <h3>New/Edit Artist</h3>
   <table class=newInfo>
     <tr>
  <div class=label> 
@@ -52,6 +52,6 @@
     </tr>
   
   </table>
-  <input id=create type="submit" value="Create"/>
+  <input id=create type="submit" ng-value="checkOKButton()"/>
   <input id=reset type="reset" value="Clear"/>
 

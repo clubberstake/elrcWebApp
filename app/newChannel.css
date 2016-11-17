@@ -2,10 +2,15 @@ body {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-se
       font-size: 17px;}
 .action{
         font-size: 24px;
-        position: absolute;
+        position: relative;
         left: 37%;
-        top: 270px;
         }
+.title{
+    position:absolute;
+    left:40%;
+    font-size: 25px; 
+    top: 295px;;
+}
 ul.tab {
     list-style-type: none;
     margin: 0;
@@ -42,7 +47,13 @@ ul.tab li a {
   display: inline;
 }
 .content{padding: 5px;}
-.newInfo{width:100%}
+.newInfo{
+    position: relative;
+    left: 10%;
+    width:75%;
+    top: 20px;
+    
+    }
 textarea{resize:none;}
 /* Change background color of links on hover */
 ul.tab li a:hover {

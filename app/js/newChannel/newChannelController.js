@@ -8,6 +8,11 @@ app.controller('newChannelController', ['$scope', '$location', 'newChannelServic
             $scope.conclusion = data.data.conclusion;
         });
 
+        $scope.isEditingArtist = false;
+        $scope.checkOKButton = function(){
+         return $scope.isEditingArtist ? "Update" : "Create";
+        };
+
     }]);
 
 

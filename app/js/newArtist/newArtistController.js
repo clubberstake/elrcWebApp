@@ -9,6 +9,9 @@ app.controller('newArtistController', ['$scope', '$location', 'newArtistService'
         });
 
         $scope.isEditingArtist = false;
+         $scope.checkOKButton = function(){
+         return $scope.isEditingArtist ? "Update" : "Create";
+        };
 
     }]);
 
