@@ -14,7 +14,7 @@ app.controller('ArtistController', ['$scope', '$location', 'ArtistService',
 app.factory('ArtistService', ['$http', function ($http) {
 
     var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/rtistJSON.json').success(function (data) {
+        var promise = $http.get('app/JSON/artistJSON.json').success(function (data) {
             return data;
         });
 
