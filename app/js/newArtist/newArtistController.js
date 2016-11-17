@@ -8,6 +8,8 @@ app.controller('newArtistController', ['$scope', '$location', 'newArtistService'
             $scope.conclusion = data.data.conclusion;
         });
 
+        $scope.isEditingArtist = false;
+
     }]);
 
 

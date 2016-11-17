@@ -1,9 +1,9 @@
 <div class=choice>
-<input type="radio" name = "newEdit" value = "New"/> New
-<input type="radio" name = "newEdit" value = "Edit"/> Edit <br/>
+<input type="radio" name = "newEdit" value = "New" ng-model="isEditingArtist" ng-value="false"/> New
+<input type="radio" name = "newEdit" value = "Edit" ng-model="isEditingArtist" ng-value="true"/> Edit <br/>
 
-Artist to edit: &nbsp;
-          <select>
+<span ng-show="isEditingArtist">Artist to edit:</span>
+          <select ng-show="isEditingArtist">
           <option value="" disabled selected>Artist Not Chosen</option>
           <option value=artist1>Artist 1 </option>
           <option value=artist2>Artist 2 </option>
