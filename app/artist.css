@@ -96,7 +96,7 @@ ul {
 }
 .artistAlignmentTable{
     width:95%;
-    border-top:10px solid darkred;
+    border-top:30px solid darkred;
     position:relative;
     left:5%;
     background-color:darkred;
@@ -105,7 +105,7 @@ ul {
     background-color:darkred;
 }
 #artistDescriptionTable{
-    width:67%;
+    width:78%;
     border:3px solid silver;
     border-radius:10%;
     background: #404040;
@@ -143,7 +143,7 @@ th{
     padding-top:3%;
     padding-left:6%;
     color:silver;
-    font-size:90%;
+    font-size:85%;
     text-shadow:0 1px 0 black,
                0 2px 0 black,
                0 3px 0 black,
@@ -157,8 +157,8 @@ th{
 .artistName{
     padding-top:3%;
     color:darkred;
-    text-align:left;
-    font-size:200%;
+    text-align:center;
+    font-size:140%;
     text-shadow:-1px 0 silver, 
                0 1px silver,
                1px 0 silver, 
