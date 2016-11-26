@@ -139,7 +139,7 @@ a {
    text-decoration: none;
 }
 
-ul {
+social-ul {
    list-style: none;
    margin: 0;
    padding: 0;
@@ -190,3 +190,28 @@ ul {
 #sticky-social a[class*="blackboard"],
 #sticky-social a[class*="blackboard"]:hover,
 #sticky-social a[class*="blackboard"] span { background: black; }	
+
+.artistList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+    border: 1px solid #555;
+    position: fixed;
+}
+.artistNameOnList a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #555;
+}
+.artistNameOnList a:hover {
+    background-color: #555;
+    color: white;
+}
+.artistNameOnList:last-child {
+    border-bottom: none;
+}
