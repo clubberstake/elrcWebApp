@@ -1,28 +1,28 @@
-app.controller('ArchiveController', ['$scope', '$location', 'ArchiveService',
-    function ($scope, $location, HomeService) {
+app.controller('ArchiveController', ['$scope', 'ArchiveService', '$log', '$window',
+  function($scope, ArchiveService, $log, $window) {
+    var vm = $scope;
 
-        HomeService.get().then(function (data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
-        });
+    ArchiveService.get().then(function(response) {
+      $log.log('ArchiveService result:', response.data);
+    });
 
-    }]);
-
-
-app.factory('ArchiveService', ['$http', function ($http) {
-
-    var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/archiveJSON.json').success(function (data) {
-            return data;
-        });
-
-        return promise;
+    vm.filter = function(key) {
+      $log.log('Requested filtering on key: "' + key + '"');
+      $window.alert('Requested filtering on key: "' + key + '"');
     };
+  }
+]);
 
-    return {
-        get: getDataFromJson
-    }
+app.factory('ArchiveService', ['$http', function($http) {
+  var service = {
+    get: get
+  };
 
+  return service;
+
+  /////
+
+  function get() {
+    return $http.get('app/JSON/archiveJSON.json');
+  };
 }]);

@@ -1,17 +1,23 @@
-	 <div>
-	 <table class="archiveTableHeader">
-        <tr>
-            <th class="archiveHeader"> ARCHIVE VIDEOS </th>
-        <tr>
-    </table>
-	</div>
+	<div>
+  <table class="archiveTableHeader">
+    <tr>
+      <th class="archiveHeader"> ARCHIVE VIDEOS </th>
+      <tr>
+  </table>
+</div>
 
-	<select name="Filter">		  
-		   <option value= "FILTER">FILTER</option>
-		   <option value= "FILTER">Popular</option>
-		   <option value= "FILTER">Newest to oldest</option>
-		   <option value= "FILTER">Oldest to newest</option>
-     </select>
+<div class="archive-filter"
+    ng-init="showFilter = false"
+    ng-mouseenter="showFilter = true"
+    ng-mouseleave="showFilter = false">
+  <div class="archive-filter-title">Filter</div>
+  <div class="archive-filter-dropdown" ng-show="showFilter">
+    <div class="archive-filter-dropdown-item" ng-click="filter('popular')">Popular</div>
+    <div class="archive-filter-dropdown-item" ng-click="filter('newest-to-oldest')">Newest to Oldest</div>
+    <div class="archive-filter-dropdown-item" ng-click="filter('oldest-to-newest')">Oldest to Newest</div>
+  </div>
+</div>
+
 
 <div class="archiveChannelContainer" align="center">
     <div class="archiveChannelVideos">
