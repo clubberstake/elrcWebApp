@@ -1,3 +1,79 @@
+.artistBioHeader{
+    width:98%;
+    margin-left:1%;
+    margin-right:1%;
+    border-top:5px solid darkred;
+    background: #404040;
+    background-image: -webkit-linear-gradient(top, #404040, black);
+    background-image: -moz-linear-gradient(top, #404040, black);
+    background-image: -ms-linear-gradient(top, #404040, black);
+    background-image: -o-linear-gradient(top, #404040, black);
+    background-image: linear-gradient(to bottom, #404040, black);
+}
+.artistBioHeaderTitle{
+    color:darkred;
+    font-size:175%;
+    text-align:center;
+    text-shadow:-1px 0 silver, 
+               0 1px silver,
+               1px 0 silver, 
+               0 -1px silver,
+               0 1px 0 black,
+               0 2px 0 black,
+               0 3px 0 black,
+               0 4px 0 #000,
+               0 5px 0 #000,
+               0 6px 1px black,
+               0 0 5px black,
+               0 1px 3px black,
+               0 3px 5px black;
+    background: #404040;
+    background-image: -webkit-linear-gradient(top, #404040, black);
+    background-image: -moz-linear-gradient(top, #404040, black);
+    background-image: -ms-linear-gradient(top, #404040, black);
+    background-image: -o-linear-gradient(top, #404040, black);
+    background-image: linear-gradient(to bottom, #404040, black);
+}
+a { 
+   text-decoration: none;
+}
+ul {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+#sticky-artistNav {
+   left: 0;
+   position: fixed;
+   top: 350px;
+   border:2px solid silver;
+   overflow-y:scroll;
+   height:300px;
+}
+#sticky-artistNav a {
+   background: #272829;
+   color: silver;
+   display: block;
+   height: 40px;
+   font: 14px "Open Sans", sans-serif;
+   text-shadow: 0 1px silver,
+               1px 0 silver, 
+               0 1px 0 black,
+               0 2px 0 black,
+               0 3px 0 black,
+               0 4px 0 #000,
+               0 5px 0 #000,
+               0 6px 1px black,
+               0 0 5px black;
+   line-height: 50px;
+   position: relative;
+   text-align: center;
+   padding-bottom:7px;
+   width: 150px;
+}
+#sticky-artistNav a:hover{
+   background: darkred;
+}
 .artistPic{
     border-radius:30%;
     border:3px solid silver;
@@ -18,15 +94,18 @@
     margin-right:2%;
     float:left;
 }
-#spacingTable{
-    width:50%;
+.artistAlignmentTable{
+    width:95%;
+    border-top:30px solid darkred;
+    position:relative;
+    left:5%;
     background-color:darkred;
 }
-.spacingTableRow{
+.artistColumnAlign{
     background-color:darkred;
 }
 #artistDescriptionTable{
-    width:67%;
+    width:78%;
     border:3px solid silver;
     border-radius:10%;
     background: #404040;
@@ -64,7 +143,7 @@ th{
     padding-top:3%;
     padding-left:6%;
     color:silver;
-    font-size:90%;
+    font-size:85%;
     text-shadow:0 1px 0 black,
                0 2px 0 black,
                0 3px 0 black,
@@ -78,8 +157,8 @@ th{
 .artistName{
     padding-top:3%;
     color:darkred;
-    text-align:left;
-    font-size:200%;
+    text-align:center;
+    font-size:140%;
     text-shadow:-1px 0 silver, 
                0 1px silver,
                1px 0 silver, 
@@ -107,12 +186,4 @@ th{
     text-shadow:0 1px 0 black,
                0 2px 0 black,
                0 3px 0 black;
-}
-#spacingTableBelowBio{
-    width:100%;
-    height:2px;
-    background-color:darkred;
-}
-.spacingTableRowBelow{
-    background-color:darkred;
 }

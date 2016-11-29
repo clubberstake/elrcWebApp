@@ -29,6 +29,11 @@ app.config(['$routeProvider', function ($routeProvider) {
 			templateUrl: 'app/js/newArtist/newArtist.html',
 			controller: 'newArtistController'	
 		})
+
+		.when('/artist', {
+			templateUrl: 'app/js/artist/artist.html',
+			controller: 'ArtistController'	
+		})
 		.otherwise({
 			redirectTo: '/home'
 		});

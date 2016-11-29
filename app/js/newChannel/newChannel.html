@@ -1,22 +1,22 @@
-<div class=choice>
-<input type="radio" name = "newEdit" value = "New"/> New
-<input type="radio" name = "newEdit" value = "Edit"/> Edit <br/>
+<div class = "action"> {{title}}</div>
+<ul class="tab">
+  <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
+  <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
+   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
+</ul>
+  <h3 class = "title">Show</h3>
+  <div class=choice>
+<input type="radio" name = "newEdit" value = "New"  ng-model="isEditingArtist" ng-value="false"/> New
+<input type="radio" name = "newEdit" value = "Edit" ng-model="isEditingArtist" ng-value="true"/> Edit <br/>
 
-Show to edit: &nbsp;
-          <select>
+<span ng-show="isEditingArtist">Show to edit: </span>
+          <select ng-show="isEditingArtist">
           <option value="" disabled selected>Show Not Chosen</option>
           <option value=artist1>Show 1 </option>
           <option value=artist2>Show 2 </option>
           <option value=artist3>Show 3 </option>
         </select>
 </div>
- <div class = "action"> {{title}}</div>
-<ul class="tab">
-  <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
-  <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
-   <li><a href="#/newPodcast" class="tablinks" >Podcast</a></li>
-</ul>
-  <h3>New/Edit Show</h3>
 <table class=newInfo>
   <tr>
     <td class=content>
@@ -41,13 +41,29 @@ Show to edit: &nbsp;
       <textarea placeholder="Describe the new Show." rows=4  cols=37></textarea>
       </td>
       <td class=content>
-        Choose Artist: 
-        <select>
-          <option value="" disabled selected>Artist Not Chosen</option>
-          <option value=artist1>Artist 1 </option>
-          <option value=artist2>Artist 2 </option>
-          <option value=artist3>Artist 3 </option>
-        </select>
+        <table ng-controller="ctrlMonth"> 
+         <tr>
+            <td>
+   <div class="sample" align="center" >  
+     Artists to Choose From
+     <select style="width: 50%;" size="7">
+         <option ng-click="move($index)" ng-repeat="month in months"> {{month}} </option>
+         </select>      
+   </div>  
+            </td> 
+            <td>
+   <div class="sample" align="center">  
+     Artist(s) Chosen
+     <select style="width: 70%;" size="7" >
+         <option ng-click="moveBack($index)" ng-repeat="select in selected "> {{select}} </option>
+             </select>  
+   </div>  
+            </td>
+         </tr>
+   </table>
+       
+
+       
       </td>
   </tr>
    <tr>
@@ -56,7 +72,7 @@ Show to edit: &nbsp;
         </td>
     </tr>
 </table>
-<input id=create type="submit" value="Create"/>
+<input id=create type="submit" ng-value="checkOKButton()"/>
 <input id=reset type="reset" value="Clear"/>
 
 
