@@ -55,14 +55,11 @@ iframe {
   background: black;
   color: white;
   max-width: 200px;
+  position: relative;
 }
 
 .archive-filter:hover {
   cursor: pointer;
-}
-
-.archive-filter-title {
-
 }
 
 .archive-filter-title,
@@ -74,6 +71,9 @@ iframe {
 .archive-filter-dropdown {
   padding-top: 5px;
   border-top: 1px solid white;
+  position: absolute;
+  background: black;
+  width: 200px;
 }
 
 .archive-filter-dropdown-item {
