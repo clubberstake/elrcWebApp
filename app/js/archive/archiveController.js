@@ -1,28 +1,26 @@
 app.controller('ArchiveController', ['$scope', 'ArchiveService', '$log', '$window',
-  function($scope, ArchiveService, $log, $window) {
-    var vm = $scope;
+    function($scope, ArchiveService, $log, $window) {
+        var vm = $scope;
 
-    ArchiveService.get().then(function(response) {
-      $log.log('ArchiveService result:', response.data);
-    });
+        ArchiveService.getArchivePodcasts();
 
-    vm.filter = function(key) {
-      $log.log('Requested filtering on key: "' + key + '"');
-      $window.alert('Requested filtering on key: "' + key + '"');
-    };
-  }
+        vm.filter = function(key) {
+            $log.log('Requested filtering on key: "' + key + '"');
+            $window.alert('Requested filtering on key: "' + key + '"');
+        };
+    }
 ]);
 
-app.factory('ArchiveService', ['$http', function($http) {
-  var service = {
-    get: get
-  };
+app.factory('ArchiveService', ['UrlService', function(UrlService) {
+    var getArchivePodcasts = function() {
+        UrlService.getArchivePodcasts().then(function(promise) {
+            console.log(promise.data);
+            console.log(promise.data.id);
+            console.log(promise.data.podcastName);
+        })
+    };
 
-  return service;
-
-  /////
-
-  function get() {
-    return $http.get('app/JSON/archiveJSON.json');
-  };
+    return {
+        getArchivePodcasts: getArchivePodcasts
+    }
 }]);
