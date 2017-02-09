@@ -1,33 +1,42 @@
-app.controller('newPodcastController', ['$scope', '$location', 'newPodcastService',
-    function ($scope, $location, HomeService) {
+app.controller('newPodcastController', ['$scope','newPodcastService', '$log', '$window',
+    function ($scope ,newPodcastService, $location,  $log, $window) {
 
-        HomeService.get().then(function (data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
-        });
+  var vm = $scope;
+ newPodcastService.getNewPodcastInfo();
 
-        $scope.isEditingArtist = false;
-         $scope.checkOKButton = function(){
-         return $scope.isEditingArtist ? "Update" : "Create";
+        vm.filter = function(key){
+              $log.log('Requested filtering on key: "' + key + '"');
+              $window.alert('Requested filtering on key: "' + key + '"');
+        }
+
+        vm.isEditingArtist = false;
+        vm.checkOKButton = function(){
+         return vm.isEditingArtist ? "Update" : "Create";
         };
 
+
+
+    // },
+    // // function($scope, $location, HomeService){
+    // //      HomeService.get().then(function (data) {
+    // //         $scope.title = data.data.title;
+    // //         $scope.subTitle = data.data.subTitle;
+    // //         $scope.bodyText = data.data.bodyText;
+    // //         $scope.conclusion = data.data.conclusion;
+    // //     });
     }]);
 
 
-app.factory('newPodcastService', ['$http', function ($http) {
+app.factory('newPodcastService', ['UrlService', function (UrlService) {
 
-    var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/newPodcast.json').success(function (data) {
-            return data;
-        });
-
-        return promise;
+    var getNewPodcastInfo = function () {
+         UrlService.getNewPodcastInfo().then(function(promise) {
+            console.log(promise.data);
+        })
     };
 
     return {
-        get: getDataFromJson
+        getNewPodcastInfo: getNewPodcastInfo
     }
 
 }]);

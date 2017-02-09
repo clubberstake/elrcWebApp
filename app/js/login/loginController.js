@@ -1,28 +1,30 @@
-app.controller('LoginController', ['$scope', '$location', 'LoginService',
-    function ($scope, $location, HomeService) {
+app.controller('LoginController', ['$scope', 'LoginService', '$log', '$window', '$location',
+    function ($scope, LoginService, $log, $window, $location) {
 
-        HomeService.get().then(function (data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
+        //    LoginService.getLoginInfo().then(function (data) {
+        //    $scope.title = data.data.title;
+        //  });
+
+        LoginService.getLoginInfo().then(function (promise) {
+            console.log("vm: " + promise);
+            $scope.title = promise.data.title;
         });
+
+        // vm.filter = function (key) {
+        //     $log.log('Requested filtering on key: "' + key + '"');
+        //     $window.alert('Requested filtering on key: "' + key + '"');
+        // };
 
     }]);
 
 
-app.factory('LoginService', ['$http', function ($http) {
+app.factory('LoginService', ['UrlService', function (UrlService) {
 
-    var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/loginJSON.json').success(function (data) {
-            return data;
-        });
-
-        return promise;
+    var getLoginInfo = function () {
+        return UrlService.getLoginInfo();
     };
 
     return {
-        get: getDataFromJson
+        getLoginInfo: getLoginInfo
     }
-
 }]);
