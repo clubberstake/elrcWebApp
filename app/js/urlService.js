@@ -145,22 +145,16 @@ var getTemp = function(name){
 
 }
 //Khalid
-var getTemp = function(name){
+var getArtistPage = function(name) {
+        console.log(baseUrl + '/artists/all_artists');
 
+        var promise = $http.get(baseUrl + '/artists/all_artists').success(function(data) {
+            return data;
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
+        console.log(promise);
+        return promise;
+    };
 var getTemp = function(name){
 
 
@@ -221,7 +215,8 @@ var getTemp = function(name){
         getNewPodcastInfo: getNewPodcastInfo,  
         getNewArtistInfo: getNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
-        getHomepage: getHomepage
+        getHomepage: getHomepage,
+        getArtistPage: getArtistPage
     };
 }]);
 
