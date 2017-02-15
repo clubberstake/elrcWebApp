@@ -78,23 +78,6 @@ var getHomepage = function(name) {
         console.log(promise);
         return promise;
     };
-
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 //Ryan
 var getShowPage = function(name) {
         console.log(baseUrl + '/shows/artistShow');
@@ -105,52 +88,8 @@ var getShowPage = function(name) {
 
         console.log(promise);
         return promise;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 //Khalid
 var getTemp = function(name){
 
@@ -228,16 +167,8 @@ var getTemp = function(name){
         getNewPodcastInfo: getNewPodcastInfo,  
         getNewArtistInfo: getNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-        getHomepage: getHomepage
-=======
-        getShowPage: getShowPage
->>>>>>> Stashed changes
-=======
-        getShowPage: getShowPage
->>>>>>> Stashed changes
-    };
+        getHomepage: getHomepage,
+        getShowPage: getShowPage    };
 }]);
 
 /*
