@@ -66,23 +66,18 @@ var getLogin = function(){}
     };
 
     var getArtist = function() {}
+    
 //Nate
-var getTemp = function(name){
+var getHomepage = function(name) {
+        console.log(baseUrl + '/home/featuredPodcasts');
 
+        var promise = $http.get(baseUrl + '/home/featuredPodcasts').success(function(data) {
+            return data;
+        });
 
-
-
-
-
-
-
-
-
-
-
-
-
-}
+        console.log(promise);
+        return promise;
+    };
 
 var getTemp = function(name){
 
@@ -225,7 +220,8 @@ var getTemp = function(name){
         getNewPodcast: getNewPodcast,
         getNewPodcastInfo: getNewPodcastInfo,  
         getNewArtistInfo: getNewArtistInfo,
-        getNewChannelInfo: getNewChannelInfo
+        getNewChannelInfo: getNewChannelInfo,
+        getHomepage: getHomepage
     };
 }]);
 

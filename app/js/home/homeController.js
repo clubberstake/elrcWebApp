@@ -1,27 +1,28 @@
-app.controller('HomeController', ['$scope', '$location', 'HomeService',
-    function($scope, $location, HomeService, UrlService) {
+app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window',
+    function($scope, HomeService, $log, $window) {
+        var vm = $scope;
 
-        HomeService.get().then(function(data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
-        });
+        HomeService.getHomepage();
+
+        vm.filter = function(key) {
+            $log.log('Requested filtering on key: "' + key + '"');
+            $window.alert('Requested filtering on key: "' + key + '"');
+        };
     }
 ]);
 
-app.factory('HomeService', ['$http', function($http) {
-
-    var getDataFromJson = function() {
-        var promise = $http.get('app/JSON/home.json').success(function(data) {
-            return data;
-        });
-
-        return promise;
+app.factory('HomeService', ['UrlService', function(UrlService) {
+    var getHomepage = function() {
+        UrlService.getHomepage().then(function(promise) {
+            console.log(promise.data);
+            console.log(promise.data.id);
+            console.log(promise.data.title);
+            console.log(promise.data.desc);
+            console.log(promise.data.embedded_url);
+        })
     };
 
     return {
-        get: getDataFromJson
+        getHomepage: getHomepage
     }
-
 }]);
