@@ -24,4 +24,5 @@ app.factory('ArchiveService', ['UrlService', function(UrlService) {
     return {
         getArchivePodcasts: getArchivePodcasts
     }
+    
 }]);

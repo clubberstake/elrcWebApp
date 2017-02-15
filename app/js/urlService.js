@@ -78,72 +78,18 @@ var getHomepage = function(name) {
         console.log(promise);
         return promise;
     };
-
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 //Ryan
-var getTemp = function(name){
+var getShowPage = function(name) {
+        console.log(baseUrl + '/shows/artistShow');
 
+        var promise = $http.get(baseUrl + '/shows/artistShow').success(function(data) {
+            return data;
+        });
 
+        console.log(promise);
+        return promise;
+};
 
-
-
-
-
-
-
-
-
-
-
-
-}
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
 //Khalid
 var getArtistPage = function(name) {
         console.log(baseUrl + '/artists/all_artists');
@@ -216,8 +162,12 @@ var getTemp = function(name){
         getNewArtistInfo: getNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
         getHomepage: getHomepage,
+<<<<<<< HEAD
         getArtistPage: getArtistPage
     };
+=======
+        getShowPage: getShowPage    };
+>>>>>>> 505c4d99465801c6d15208b8416e7198b6a96ba1
 }]);
 
 /*
