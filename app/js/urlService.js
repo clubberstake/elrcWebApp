@@ -96,8 +96,15 @@ var getTemp = function(name){
 
 }
 //Ryan
-var getTemp = function(name){
+var getShowPage = function(name) {
+        console.log(baseUrl + '/shows/artistShow');
 
+        var promise = $http.get(baseUrl + '/shows/artistShow').success(function(data) {
+            return data;
+        });
+
+        console.log(promise);
+        return promise;
 
 
 
@@ -221,7 +228,15 @@ var getTemp = function(name){
         getNewPodcastInfo: getNewPodcastInfo,  
         getNewArtistInfo: getNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
         getHomepage: getHomepage
+=======
+        getShowPage: getShowPage
+>>>>>>> Stashed changes
+=======
+        getShowPage: getShowPage
+>>>>>>> Stashed changes
     };
 }]);
 

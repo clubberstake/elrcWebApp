@@ -1,28 +1,33 @@
-app.controller('PodcastController', ['$scope', '$location', 'PodcastService',
-    function ($scope, $location, HomeService) {
+app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$window',
+    function($scope, PodcastService, $log, $window) {
+        var vm = $scope;
 
-        HomeService.get().then(function (data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
-        });
+        PodcastService.getShowPage();
 
-    }]);
+        vm.filter = function(key) {
+            $log.log('Requested filtering on key: "' + key + '"');
+            $window.alert('Requested filtering on key: "' + key + '"');
+        };
+    }
+]);
 
-
-app.factory('PodcastService', ['$http', function ($http) {
-
-    var getDataFromJson = function () {
-        var promise = $http.get('app/JSON/podcastJSON.json').success(function (data) {
-            return data;
-        });
-
-        return promise;
+app.factory('PodcastService', ['UrlService', function(UrlService) {
+    var getShowPage = function() {
+        UrlService.getShowPage().then(function(promise) {
+            console.log(promise.data);
+            console.log(promise.data.show_id);
+            console.log(promise.data.show_name);
+            console.log(promise.data.show_desc);
+            console.log(promise.data.show_image);
+            console.log(promise.data.dj_name);
+            console.log(promise.data.embedded_url);
+            console.log(promise.data.podcast_title);
+            console.log(promise.data.podcast_decs);
+        })
     };
 
     return {
-        get: getDataFromJson
+        getShowPage: getShowPage
     }
-
+    
 }]);
