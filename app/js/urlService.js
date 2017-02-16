@@ -2,57 +2,69 @@ app.factory('UrlService', ['$http', function($http) {
 
     var baseUrl = 'http://localhost:8080/';
 
-var getNewChannelInfo = function(id){
-    console.log(baseUrl + 'admin/newChannel');
+    var getNewChannelInfo = function(id) {
+        console.log(baseUrl + 'admin/newChannel');
 
-    var promise = $http.get(baseUrl + 'admin/newChannel').success(function(data){
-        return data;
-    });
+        var promise = $http.get(baseUrl + 'admin/newChannel').success(function(data) {
+            return data;
+        });
 
-    console.log(promise);
-    return promise;
-};
+        console.log(promise);
+        return promise;
+    };
 
-var getNewChannel = function(){}
+    var getNewChannel = function() {}
 
-var getNewArtistInfo = function(id){
-    console.log(baseUrl + 'admin/newArtist');
+    var getNewArtistInfo = function(id) {
+        console.log(baseUrl + 'admin/newArtist');
 
-    var promise = $http.get(baseUrl + 'admin/newArtist').success(function(data){
-        return data;
-    });
+        var promise = $http.get(baseUrl + 'admin/newArtist').success(function(data) {
+            return data;
+        });
 
-    console.log(promise);
-    return promise;
-};
+        console.log(promise);
+        return promise;
+    };
 
-var getNewArtist = function(){}
+    var postNewArtistInfo = function(user) {
+        console.log(baseUrl + 'admin/newArtist');
 
-var getNewPodcastInfo = function(id){
-    console.log(baseUrl + 'admin/newPodcast');
+        var promise = $http.post(baseUrl + 'admin/newArtist', JSON.stringify(user)).success(function(data) {
+            console.log('Save was a success');
+            return data;
+        });
 
-    var promise = $http.get(baseUrl + 'admin/newPodcast').success(function(data){
-        return data;
-    });
+        console.log(promise);
+        return promise;
+    };
 
-    console.log(promise);
-    return promise;
-};
+    var getNewArtist = function() {}
 
-var getNewPodcast = function(){}
-    
-var getLoginInfo = function(id){
-    console.log(baseUrl + 'admin/login');
+    var getNewPodcastInfo = function(id) {
+        console.log(baseUrl + 'admin/newPodcast');
 
-    var promise = $http.get(baseUrl + 'admin/login?title=AdminLogin').success(function(data){
-        return data;
-    });
+        var promise = $http.get(baseUrl + 'admin/newPodcast').success(function(data) {
+            return data;
+        });
 
- console.log(promise);
-    return promise;
-};
+        console.log(promise);
+        return promise;
+    };
 
-var getLogin = function(){}
+    var getNewPodcast = function() {}
+
+    var getLoginInfo = function(id) {
+        console.log(baseUrl + 'admin/login');
+
+        var promise = $http.get(baseUrl + 'admin/login?title=AdminLogin').success(function(data) {
+            return data;
+        });
+
+        console.log(promise);
+        return promise;
+    };
+
+    var getLogin = function() {}
 
     var getArchivePodcasts = function(name) {
         console.log(baseUrl + 'archive/all_podcasts');
@@ -66,9 +78,9 @@ var getLogin = function(){}
     };
 
     var getArtist = function() {}
-    
-//Nate
-var getHomepage = function(name) {
+
+    //Nate
+    var getHomepage = function(name) {
         console.log(baseUrl + '/home/featuredPodcasts');
 
         var promise = $http.get(baseUrl + '/home/featuredPodcasts').success(function(data) {
@@ -78,8 +90,8 @@ var getHomepage = function(name) {
         console.log(promise);
         return promise;
     };
-//Ryan
-var getShowPage = function(name) {
+    //Ryan
+    var getShowPage = function(name) {
         console.log(baseUrl + '/shows/artistShow');
 
         var promise = $http.get(baseUrl + '/shows/artistShow').success(function(data) {
@@ -88,26 +100,10 @@ var getShowPage = function(name) {
 
         console.log(promise);
         return promise;
-};
+    };
 
-//Khalid
-var getTemp = function(name){
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-var getTemp = function(name){
+    //Khalid
+    var getTemp = function(name) {
 
 
 
@@ -122,8 +118,8 @@ var getTemp = function(name){
 
 
 
-}
-var getTemp = function(name){
+    }
+    var getTemp = function(name) {
 
 
 
@@ -138,8 +134,8 @@ var getTemp = function(name){
 
 
 
-}
-var getTemp = function(name){
+    }
+    var getTemp = function(name) {
 
 
 
@@ -154,7 +150,23 @@ var getTemp = function(name){
 
 
 
-}
+    }
+    var getTemp = function(name) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
 
 
@@ -164,11 +176,13 @@ var getTemp = function(name){
         getLoginInfo: getLoginInfo,
         getLogin: getLogin,
         getNewPodcast: getNewPodcast,
-        getNewPodcastInfo: getNewPodcastInfo,  
+        getNewPodcastInfo: getNewPodcastInfo,
         getNewArtistInfo: getNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
         getHomepage: getHomepage,
-        getShowPage: getShowPage    };
+        getShowPage: getShowPage,
+        postNewArtistInfo: postNewArtistInfo
+    };
 }]);
 
 /*
