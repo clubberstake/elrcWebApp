@@ -103,72 +103,13 @@ app.factory('UrlService', ['$http', function($http) {
     };
 
     //Khalid
-    var getTemp = function(name) {
+    var getArtistPage = function(name) {
+        console.log(baseUrl + '/artists/all_artists');
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    var getTemp = function(name) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    var getTemp = function(name) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-    var getTemp = function(name) {
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    }
-
-
+        var promise = $http.get(baseUrl + '/artists/all_artists').success(function(data) {
+            return data;
+        });
+    };
 
     return {
         getArchivePodcasts: getArchivePodcasts,
@@ -178,11 +119,13 @@ app.factory('UrlService', ['$http', function($http) {
         getNewPodcast: getNewPodcast,
         getNewPodcastInfo: getNewPodcastInfo,
         getNewArtistInfo: getNewArtistInfo,
+        postNewArtistInfo: postNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
         getHomepage: getHomepage,
         getShowPage: getShowPage,
-        postNewArtistInfo: postNewArtistInfo
-    };
+        getArtistPage: getArtistPage,
+        getShowPage: getShowPage
+    }
 }]);
 
 /*

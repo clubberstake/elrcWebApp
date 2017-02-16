@@ -17,6 +17,7 @@ app.factory('ArchiveService', ['UrlService', function(UrlService) {
             console.log(promise.data);
             console.log(promise.data.id);
             console.log(promise.data.podcastName);
+            console.log(promise.data.podcastThumbnail);
         })
     };
 
