@@ -16,7 +16,10 @@ app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$w
 
         var jsonData = {
             "firstName": "John",
-            "lastName": "Doe"
+            "lastName": "Doe",
+            "dJName":"Doe Master Skratch",
+            "artistDesc": "Generic Description",
+            "artistImage":"image"
         };
 
         newArtistService.postNewArtistInfo(jsonData);
