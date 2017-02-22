@@ -2,6 +2,17 @@ app.factory('UrlService', ['$http', function($http) {
 
     var baseUrl = 'http://localhost:8080/';
 
+    var postNewChannelInfo = function(user) {
+        console.log(baseUrl + 'admin/newChannel');
+
+        var promise = $http.post(baseUrl + 'admin/newChannel', JSON.stringify(user)).success(function(data) {
+            console.log('Save was a success');
+            return data;
+        });
+           console.log(promise);
+        return promise;
+    };
+
     var getNewChannelInfo = function(id) {
         console.log(baseUrl + 'admin/newChannel');
 
@@ -121,6 +132,7 @@ app.factory('UrlService', ['$http', function($http) {
         getNewArtistInfo: getNewArtistInfo,
         postNewArtistInfo: postNewArtistInfo,
         getNewChannelInfo: getNewChannelInfo,
+        postNewChannelInfo: postNewChannelInfo,
         getHomepage: getHomepage,
         getShowPage: getShowPage,
         getArtistPage: getArtistPage,

@@ -14,16 +14,15 @@ app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '
             return vm.isEditingArtist ? "Update" : "Create";
         };
 
+       var jsonData = {
+           "showName": "Generic Name",
+           "showDesc": "Generic Description",
+           "artistNames": "Multiple Artist Names",
+           "showImage":"image.jpg"
+       };
 
+          newChannelService.postNewChannelInfo(jsonData);
 
-    },
-    function ($scope, $location, HomeService) {
-        HomeService.get().then(function (data) {
-            $scope.title = data.data.title;
-            $scope.subTitle = data.data.subTitle;
-            $scope.bodyText = data.data.bodyText;
-            $scope.conclusion = data.data.conclusion;
-        });
     }]);
 
 
@@ -35,8 +34,13 @@ app.factory('newChannelService', ['UrlService', function (UrlService) {
         })
     };
 
+    var postNewChannelInfo = function(someJsonData){
+        UrlService.postNewChannelInfo(someJsonData);
+    };
+
     return {
-        getNewChannelInfo: getNewChannelInfo
+        getNewChannelInfo: getNewChannelInfo,
+        postNewChannelInfo:postNewChannelInfo
     }
 
 }]);
@@ -52,6 +56,10 @@ app.controller('ctrlMonth', function ($scope) {
         $scope.months.push($scope.selected[index]);
         $scope.selected.splice(index, 1);
     };
+
+     function ClearText(){
+         document.getElementsByClassName("clearable").reset();
+     }
 });
 
 

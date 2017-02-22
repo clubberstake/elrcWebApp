@@ -1,4 +1,4 @@
-<div class = "action"> {{title}}</div>
+<div class = "action"> What would you like to do?</div>
 <ul class="tab">
   <li><a href="#/newArtist" class="tablinks" >Artist</a></li>
   <li id=current><a href="#/newChannel" class="tablinks"> Show</a></li>
@@ -22,7 +22,7 @@
     <td class=content>
  <div class=label> 
  Show Name: 
- <input type = "text" name= "ShowName" class= "cText" maxlength="20" placeholder="Enter Show Name"/>
+ <input type = "text" name= "ShowName" class= "clearable" maxlength="20" placeholder="Enter Show Name"/>
 </div>
     </td>
     <td class=content>
@@ -38,7 +38,7 @@
   <tr>
     <td class=content>
       Show Description: </br>
-      <textarea placeholder="Describe the new Show." rows=4  cols=37></textarea>
+      <textarea placeholder="Describe the new Show." rows=4  cols=37 class="clearable"></textarea>
       </td>
       <td class=content>
         <table ng-controller="ctrlMonth"> 
@@ -73,7 +73,7 @@
     </tr>
 </table>
 <input id=create type="submit" ng-value="checkOKButton()"/>
-<input id=reset type="reset" value="Clear"/>
+<input id=reset type="reset" value="Clear" onclick="ClearText()"/>
 
 
 
