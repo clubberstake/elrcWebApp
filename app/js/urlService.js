@@ -115,11 +115,13 @@ app.factory('UrlService', ['$http', function($http) {
 
     //Khalid
     var getArtistPage = function(name) {
-        console.log(baseUrl + '/artists/all_artists');
+        console.log(baseUrl + 'artists/all_artists');
 
-        var promise = $http.get(baseUrl + '/artists/all_artists').success(function(data) {
+        var promise = $http.get(baseUrl + 'artists/all_artists').success(function(data) {
             return data;
         });
+
+        return promise;
     };
 
     return {
