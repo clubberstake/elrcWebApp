@@ -9,7 +9,7 @@ app.factory('UrlService', ['$http', function($http) {
             console.log('Save was a success');
             return data;
         });
-           console.log(promise);
+        
         return promise;
     };
 
@@ -20,7 +20,6 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
@@ -33,7 +32,6 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
@@ -45,7 +43,6 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
@@ -58,7 +55,6 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
@@ -71,7 +67,6 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
@@ -84,13 +79,11 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
     var getArtist = function() {}
 
-    //Nate
     var getHomepage = function(name) {
         console.log(baseUrl + '/home/featuredPodcasts');
 
@@ -98,10 +91,9 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
-    //Ryan
+
     var getShowPage = function(name) {
         console.log(baseUrl + '/shows/artistShow');
 
@@ -109,15 +101,14 @@ app.factory('UrlService', ['$http', function($http) {
             return data;
         });
 
-        console.log(promise);
         return promise;
     };
 
-    //Khalid
     var getArtistPage = function(name) {
         console.log(baseUrl + 'artists/all_artists');
 
         var promise = $http.get(baseUrl + 'artists/all_artists').success(function(data) {
+
             return data;
         });
 

@@ -18,7 +18,6 @@ app.factory('ArtistService', ['UrlService', function(UrlService) {
             return promise.data;
         })
     };
-
     return {
         getArtistPage: getArtistPage
     }
