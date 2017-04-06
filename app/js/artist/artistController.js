@@ -14,10 +14,12 @@ app.controller('ArtistController', ['$scope', 'ArtistService', '$log', '$window'
 app.factory('ArtistService', ['UrlService', function(UrlService) {
     var getArtistPage = function() {
         UrlService.getArtistPage().then(function(promise) {
+            $scope.djName = promise.data[0]
             console.log(promise.data);
             return promise.data;
         })
     };
+
     return {
         getArtistPage: getArtistPage
     }
