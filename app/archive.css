@@ -75,11 +75,13 @@ iframe {
   background: black;
   width: 200px;
 }
-
-.archive-filter-dropdown-item {
-
+.archiveAlignTable{
+  width:95%;
+    border-top:30px solid darkred;
+    position:relative;
+    left:5%;
+    background-color:darkred;
 }
-
 .archive-filter-dropdown-item:hover {
   background: white;
   color: black;
@@ -87,4 +89,8 @@ iframe {
 
 .archive-content {
   margin: 5px 1%;
+}
+
+.archiveAlighnTable{
+  margin-left: 20%;
 }
