@@ -1,25 +1,23 @@
-   <table id="showPodcastTableHeader">
+   <table id="showPodcastTableHeader" ng-repeat="show in shows">
         <tr>
-            <th class="showPodcastHeader"> -- ARTIST SHOW NAME -- </th>
+            <th class="showPodcastHeader">{{show.showName}}</th>
         <tr>
     </table>
    
    <table class="podcastAlignmentTable" >
     <th class="podcastColumnAlign">
     <div class="podcastProfilePicContainer">
-        <img src="app/img/ksweg.jpg" alt="Artist Picture" class="podcastPic" width="250" height="250">
+        <img ng-src={{show.showImage}} alt="Artist Picture" class="podcastPic" width="250" height="250">
     </div>
     </th>
     <th class="podcastColumnAlign" align="left">
     <table id="podcastDescriptionTable" margin-top=5%;>
         <tr>
             <th class="podcastFeaturing">Featuring.... </th>
-            <th class="podcastName">DJ KENNY </th>
+            <th class="podcastName">{{show.djName}} </th>
         </tr>
         <tr>
-            <th colspan="2" rowspan="5" class="podcastDescription"><p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p>
-            <p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p>
-            <p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p></th>
+            <th colspan="2" rowspan="5" class="podcastDescription">{{show.showDesc}}</th>
         </tr>
         </th>
     </table>
@@ -34,25 +32,23 @@
 	<div>
 	 <table class="mainBioVideoHeader">
         <tr>
-            <th class="mainBioVideoTitle"> TITLE OF THE PODCAST</th>
+            <th class="mainBioVideoTitle"> {{show.podcastTitle}}</th>
         <tr>
     </table>
 	</div>
 
 	<div class="mainVideoContainer">
 		<div class="mainVideo" align="center">
-			<iframe  align="middle" width=569 height="320 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<iframe  align="middle" width=569 height="320 " ng-src={{show.embeddedURL}} frameborder="0" allowfullscreen></iframe>
 		</div>
 		<table class="featuredDescription">
         <tr>
-            <th class="featuredDescriptionBox"><p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p>
-            <p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p>
-            <p>DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE... DESCRIPTION HERE</p></th>
+            <th class="featuredDescriptionBox">{{show.podcastDesc}}</th>
         <tr>
     </table>
 	</div>
 
-    <div class="podcastChannelContainer" align="center">
+    <!--<div class="podcastChannelContainer" align="center">
     <div class="podcastChannelVideos">
 		<table>
 			<tr>
@@ -98,5 +94,5 @@
 			</tr>
 		</table>
 	</div>
-    </div>
+    </div>-->
 </div>

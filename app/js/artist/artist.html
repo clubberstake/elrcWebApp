@@ -1,23 +1,15 @@
 <div>
     <table class="artistBioHeader">
         <tr>
-            <th class="artistBioHeaderTitle">ARTIST BIOGRAPHY</th>
+            <th class="artistBioHeaderTitle">ARTIST BIOGRAPHIES</th>
             <tr>
     </table>
 </div>
 
-<aside id="sticky-artistNav">
-    <ul>
-        <li ng-repeat="artist in artists">
-            <a href="#/podcast" class="artistNavList">{{artist.artistName}}</a>
-        </li>
-    </ul>
-</aside>
-
 <table class="artistAlignmentTable" ng-repeat="artist in artists">
     <th class="artistColumnAlign">
         <div class="artistProfilePicContainer">
-            <img ng-src={{artist.image}} alt="Artist Picture" class="artistPic" width="250" height="250">
+            <img ng-src={{artist.djImage}} alt="Artist Picture" class="artistPic" width="250" height="250">
         </div>
     </th>
     <th class="artistColumnAlign">
@@ -29,10 +21,6 @@
             <tr>
                 <th class="artistFeaturing">DJ NAME:</th>
                 <th class="artistName">{{artist.djName}}</th>
-            </tr>
-            <tr>
-                <th class="artistFeaturing">SHOWS:</th>
-                <th class="artistName">{{artist.showTitle}}</th>
             </tr>
             <tr>
                 <th colspan="2" rowspan="5" class="artistDescription">{{artist.djDesc}}</th>

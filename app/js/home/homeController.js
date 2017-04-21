@@ -2,7 +2,10 @@ app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window',
     function($scope, HomeService, $log, $window) {
         var vm = $scope;
 
-        HomeService.getHomepage();
+        HomeService.getHomepage().then(function(promise){
+            $scope.shows = promise.data;
+            console.log($scope.shows);
+        });
 
         vm.filter = function(key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -13,15 +16,8 @@ app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window',
 
 app.factory('HomeService', ['UrlService', function(UrlService) {
     var getHomepage = function() {
-        UrlService.getHomepage().then(function(promise) {
-            console.log(promise.data);
-            console.log(promise.data.id);
-            console.log(promise.data.title);
-            console.log(promise.data.desc);
-            console.log(promise.data.embedded_url);
-        })
+       return UrlService.getHomepage(); 
     };
-
     return {
         getHomepage: getHomepage
     }

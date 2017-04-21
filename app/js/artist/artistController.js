@@ -1,9 +1,13 @@
-app.controller('ArtistController', ['$scope', 'ArtistService', '$log', '$window',
-    function($scope, ArtistService, $log, $window) {
+app.controller('ArtistController', ['$scope', 'ArtistService', '$log', '$window', '$sce',
+    function($scope, ArtistService, $log, $window, $sce) {
         var vm = $scope;
 
         ArtistService.getArtistPage().then(function(promise) {
             $scope.artists = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.artists.length; i++){
+                 $scope.artists[i].djImage = $sce.trustAsResourceUrl($scope.artists[i].djImage);
+            }
             console.log($scope.artists);
         });
 

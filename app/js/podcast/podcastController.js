@@ -1,8 +1,16 @@
-app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$window',
-    function($scope, PodcastService, $log, $window) {
+app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$window', '$sce',
+    function($scope, PodcastService, $log, $window, $sce) {
         var vm = $scope;
 
-        $scope.show = PodcastService.getShowPage();
+        PodcastService.getShowPage().then(function(promise) {
+            $scope.shows = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.shows.length; i++){
+                $scope.shows[i].showImage = $sce.trustAsResourceUrl($scope.shows[i].showImage);
+                $scope.shows[i].embeddedURL = $sce.trustAsResourceUrl($scope.shows[i].embeddedURL);
+            }
+            console.log($scope.shows);
+        });
 
         vm.filter = function(key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -13,10 +21,7 @@ app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$windo
 
 app.factory('PodcastService', ['UrlService', function(UrlService) {
     var getShowPage = function() {
-        UrlService.getShowPage().then(function(promise) {
-            console.log(promise.data);
-            return promise.data;
-        })
+        return UrlService.getShowPage();
     };
     return {
         getShowPage: getShowPage

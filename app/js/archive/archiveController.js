@@ -1,9 +1,15 @@
-app.controller('ArchiveController', ['$scope', 'ArchiveService', '$log', '$window',
-    function($scope, ArchiveService, $log, $window) {
+app.controller('ArchiveController', ['$scope', 'ArchiveService', '$log', '$window', '$sce',
+    function($scope, ArchiveService, $log, $window, $sce) {
         var vm = $scope;
 
       ArchiveService.getArchivePodcasts().then(function(promise){
-          $scope.archive = promise.data;
+            $scope.archive = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.archive.length; i++){
+                 $scope.archive[i].podcastThumbnail = $sce.trustAsResourceUrl($scope.archive[i].podcastThumbnail);
+            }
+
+            console.log($scope.archive);
       });
 
         vm.filter = function(key) {
