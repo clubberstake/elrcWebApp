@@ -2,7 +2,7 @@ app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '
     function ($scope, newChannelService, $location, $log, $window) {
 
         var vm = $scope;
-        newChannelService.getNewChannelInfo();
+        newChannelService.getNewShowInfo();
 
         vm.filter = function (key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -21,32 +21,32 @@ app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '
            "showImage":"image.jpg"
        };
 
-          newChannelService.postNewChannelInfo(jsonData);
+          newChannelService.postNewShowInfo(jsonData);
 
     }]);
 
 
 app.factory('newChannelService', ['UrlService', function (UrlService) {
 
-    var getNewChannelInfo = function () {
-        UrlService.getNewChannelInfo().then(function (promise) {
+    var getNewShowInfo = function () {
+        UrlService.getNewShowInfo().then(function (promise) {
             console.log(promise.data);
         })
     };
 
-    var postNewChannelInfo = function(someJsonData){
-        UrlService.postNewChannelInfo(someJsonData);
+    var postNewShowInfo = function(someJsonData){
+        UrlService.postNewShowInfo(someJsonData);
     };
 
     return {
-        getNewChannelInfo: getNewChannelInfo,
-        postNewChannelInfo:postNewChannelInfo
+        getNewShowInfo: getNewShowInfo,
+        postNewShowInfo:postNewShowInfo
     }
 
 }]);
 
 app.controller('ctrlMonth', function ($scope) {
-    $scope.months = ['Artis 1', 'Artist 2', 'Artist 3', 'Artist 4', 'Artist 5', 'Artist 6', 'Artist 7', 'Artist 8', 'Artist 9', 'Artist 10', 'Artist 11', 'Artist 12'];
+    $scope.months = ['Artist 1', 'Artist 2', 'Artist 3', 'Artist 4', 'Artist 5', 'Artist 6', 'Artist 7', 'Artist 8', 'Artist 9', 'Artist 10', 'Artist 11', 'Artist 12'];
     $scope.selected = [];
     $scope.move = function (index) {
         $scope.selected.push($scope.months[index]);

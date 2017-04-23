@@ -2,29 +2,6 @@ app.factory('UrlService', ['$http', function($http) {
 
     var baseUrl = 'http://localhost:8080/';
 
-    var postNewChannelInfo = function(user) {
-        console.log(baseUrl + 'admin/newChannel');
-
-        var promise = $http.post(baseUrl + 'admin/newChannel', JSON.stringify(user)).success(function(data) {
-            console.log('Save was a success');
-            return data;
-        });
-        
-        return promise;
-    };
-
-    var getNewChannelInfo = function(id) {
-        console.log(baseUrl + 'admin/newChannel');
-
-        var promise = $http.get(baseUrl + 'admin/newChannel').success(function(data) {
-            return data;
-        });
-
-        return promise;
-    };
-
-    var getNewChannel = function() {}
-
     var getNewArtistInfo = function(id) {
         console.log(baseUrl + 'admin/newArtist');
 
@@ -46,19 +23,47 @@ app.factory('UrlService', ['$http', function($http) {
         return promise;
     };
 
-    var getNewArtist = function() {}
+    var getNewShowInfo = function(id) {
+        console.log(baseUrl + 'admin/newShow');
 
-    var getNewPodcastInfo = function(id) {
-        console.log(baseUrl + 'admin/newPodcast');
-
-        var promise = $http.get(baseUrl + 'admin/newPodcast').success(function(data) {
+        var promise = $http.get(baseUrl + 'admin/newShow').success(function(data) {
             return data;
         });
 
         return promise;
     };
 
-    var getNewPodcast = function() {}
+    var postNewShowInfo = function(user) {
+        console.log(baseUrl + 'admin/newShow');
+
+        var promise = $http.post(baseUrl + 'admin/newShow', JSON.stringify(user)).success(function(data) {
+            console.log('Save was a success');
+            return data;
+        });
+
+        return promise;
+    };
+
+    var getNewPodcastInfo = function(id) {
+            console.log(baseUrl + 'admin/newPodcast');
+
+            var promise = $http.get(baseUrl + 'admin/newPodcast').success(function(data) {
+                return data;
+            });
+
+            return promise;
+        };
+
+    var postNewPodcastInfo = function(user) {
+        console.log(baseUrl + 'admin/newPodcast');
+
+        var promise = $http.post(baseUrl + 'admin/newPodcast', JSON.stringify(user)).success(function(data) {
+            console.log('Save was a success');
+            return data;
+        });
+
+        return promise;
+    };
 
     var getLoginInfo = function(id) {
         console.log(baseUrl + 'admin/login');
@@ -70,8 +75,6 @@ app.factory('UrlService', ['$http', function($http) {
         return promise;
     };
 
-    var getLogin = function() {}
-
     var getArchivePodcasts = function(name) {
         console.log(baseUrl + 'archive/all_podcasts');
 
@@ -81,8 +84,6 @@ app.factory('UrlService', ['$http', function($http) {
 
         return promise;
     };
-
-    var getArtist = function() {}
 
     var getHomepage = function(name) {
         console.log(baseUrl + '/home/featuredPodcasts');
@@ -117,35 +118,15 @@ app.factory('UrlService', ['$http', function($http) {
 
     return {
         getArchivePodcasts: getArchivePodcasts,
-        getArtist: getArtist,
         getLoginInfo: getLoginInfo,
-        getLogin: getLogin,
-        getNewPodcast: getNewPodcast,
+        getNewShowInfo: getNewShowInfo,
+        postNewShowInfo: postNewShowInfo,
         getNewPodcastInfo: getNewPodcastInfo,
+        postNewPodcastInfo: postNewPodcastInfo,
         getNewArtistInfo: getNewArtistInfo,
         postNewArtistInfo: postNewArtistInfo,
-        getNewChannelInfo: getNewChannelInfo,
-        postNewChannelInfo: postNewChannelInfo,
         getHomepage: getHomepage,
         getShowPage: getShowPage,
         getArtistPage: getArtistPage,
-        getShowPage: getShowPage
     }
 }]);
-
-/*
-        var adminDeleteAccountDelete = function(id, lastName) {
-            var promise = $http.delete(baseUrl + 'DeleteAccount' + '/?id=' + id + '&lastName=' + lastName).success(function(data) {
-                return data;
-            });
-
-            return promise;
-        };
-
-        var valuesControllerSamplePost = function(student) {
-            var promise = $http.post(baseUrl + 'values', JSON.stringify(student)).success(function(data) {
-                return data;
-            });
-
-            return promise;
-        };*/

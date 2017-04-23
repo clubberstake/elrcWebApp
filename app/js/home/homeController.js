@@ -1,5 +1,5 @@
-app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window',
-    function($scope, HomeService, $log, $window) {
+app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window', '$sce',
+    function($scope, HomeService, $log, $window, $sce) {
         var vm = $scope;
 
         HomeService.getHomepage().then(function(promise){

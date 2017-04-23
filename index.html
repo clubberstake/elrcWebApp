@@ -34,17 +34,10 @@
 
         </div>
         <div class="navigationBar">
-            <span class="navigationBarItem">
-                <div onclick="myFunction()" class="dropbtn">Radio Shows</div>
-                  <div id="myDropdown" class="dropdown-content">
-                    <a href="#/podcast">Show 1</a>
-                    <a href="#/podcast">Show 2</a> 
-                    <a href="#/podcast">Show 3</a> 
-                   </div>
-                </span>
+            <span class="navigationBarItem"><a href='#/podcast'>Radio Shows</a></span>
             <span class="navigationBarItem"><a href='#/artist'>Artists</a></span>
             <span class="navigationBarItem"><a href='#/archive'>Archives</a></span>
-            <span class="navigationBarItemRight"><a href="/app/img/ELRCapp.pdf" download="ELRC Application">Join the Club</a></span>
+            <span class="navigationBarItemRight"><a href="/app/img/ELRCApplication.pdf" download="ELRC Application">Join the Club</a></span>
 
         </div>
         <div class="divView" ng-view></div>
@@ -62,32 +55,5 @@
                    <img src='app/img/Blackboard.png' /></a></li>
         </social-ul>
     </aside>
-
-
-
-
-    <script>
-        /* When the user clicks on the button,
-                toggle between hiding and Channeling the dropdown content */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("Channel");
-        }
-
-        // Close the dropdown if the user clicks outside of it
-        window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-
-                var dropdowns = document.getElementsByClassName("dropdown-content");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('Channel')) {
-                        openDropdown.classList.remove('Channel');
-                    }
-                }
-            }
-        }
-    </script>
 </body>
-
 </html>
