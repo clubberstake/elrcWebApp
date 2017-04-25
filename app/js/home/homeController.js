@@ -2,7 +2,7 @@ app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window', '$
     function($scope, HomeService, $log, $window, $sce) {
         var vm = $scope;
 
-        HomeService.getHomepage().then(function(promise){
+        HomeService.getShowPage().then(function(promise){
             $scope.shows = promise.data;
             console.log($scope.shows);
         });
@@ -15,10 +15,10 @@ app.controller('HomeController', ['$scope', 'HomeService', '$log', '$window', '$
 ]);
 
 app.factory('HomeService', ['UrlService', function(UrlService) {
-    var getHomepage = function() {
-       return UrlService.getHomepage(); 
+    var getShowPage = function() {
+       return UrlService.getShowPage(); 
     };
     return {
-        getHomepage: getHomepage
+        getShowPage: getShowPage
     }
 }]);

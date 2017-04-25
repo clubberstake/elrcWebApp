@@ -8,7 +8,6 @@ app.controller('ArchiveController', ['$scope', 'ArchiveService', '$log', '$windo
             for (i = 0; i < $scope.archive.length; i++){
                  $scope.archive[i].podcastThumbnail = $sce.trustAsResourceUrl($scope.archive[i].podcastThumbnail);
             }
-
             console.log($scope.archive);
       });
 

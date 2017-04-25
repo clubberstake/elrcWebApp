@@ -1,4 +1,4 @@
-	<div>
+<div>
 	 <table class="homeTableHeader">
         <tr>
             <th class="homeHeader"> THE FEATURED PODCASTS </th>
@@ -7,36 +7,36 @@
 	</div>
 
 	<div>
-	 <table class="featuredHeader">
+	 <table class="featuredHeader"
         <tr>
-            <th class="featuredTitle">{{shows.podcastTitle}}</th>
+            <th class="featuredTitle" ng-repeat="show in shows | limitTo: 1">{{show.podcastTitle}}</th>
         <tr>
     </table>
 	</div>
 
-	<div ="featuredVideoContainer">
+	<div ="featuredVideoContainer" ng-repeat="show in shows | limitTo: 1">
 		<div class="featuredVideo" align="center">
-			<iframe  align="middle" width=569 height="320 " src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<iframe  align="middle" width=569 height="320 " ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<table class="featuredDescription">
         <tr>
-            <th class="featuredDescriptionBox"><p>{{shows.podcastDesc}}</p></th>
+            <th class="featuredDescriptionBox"><p>{{show.podcastDesc}}</p></th>
         <tr>
     </table>
 	</div>
 
 	<div class="featuredHomepageContainer" align="center">
     <div class="featuredHomepageVideos">
-		<table>
+		<table ng-repeat="show in shows | limitTo: 1">
 			<tr>
-			<th id="featuredPodcastTitle">{{shows.podcastTitle}}
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
-			<th id="featuredPodcastTitle">{{shows.podcastTitle}}
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
-			<th id="featuredPodcastTitle">{{shows.podcastTitle}}
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
 			</tr>
 		</table>

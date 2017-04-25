@@ -1,7 +1,7 @@
 app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$window', '$sce',
     function($scope, PodcastService, $log, $window, $sce) {
         var vm = $scope;
-
+       
         PodcastService.getShowPage().then(function(promise) {
             $scope.shows = promise.data;
             var i = 0;
@@ -18,6 +18,8 @@ app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$windo
         };
     }
 ]);
+
+
 
 app.factory('PodcastService', ['UrlService', function(UrlService) {
     var getShowPage = function() {

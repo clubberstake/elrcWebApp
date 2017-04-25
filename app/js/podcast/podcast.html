@@ -1,4 +1,5 @@
-   <table id="showPodcastTableHeader" ng-repeat="show in shows">
+   <div ng-repeat="show in shows">
+   <table id="showPodcastTableHeader">
         <tr>
             <th class="showPodcastHeader">{{show.showName}}</th>
         <tr>
@@ -39,60 +40,27 @@
 
 	<div class="mainVideoContainer">
 		<div class="mainVideo" align="center">
-			<iframe  align="middle" width=569 height="320 " ng-src={{show.embeddedURL}} frameborder="0" allowfullscreen></iframe>
+			<iframe  align="middle" width=569 height="320 " ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<table class="featuredDescription">
         <tr>
             <th class="featuredDescriptionBox">{{show.podcastDesc}}</th>
         <tr>
     </table>
-	</div>
 
-    <!--<div class="podcastChannelContainer" align="center">
-    <div class="podcastChannelVideos">
-		<table>
+    <table ng-repeat="show in shows | limitTo: 1">
 			<tr>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
+			<th id="featuredPodcastTitle">{{show.podcastTitle}}
+				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
 				</th>
 			</tr>
 		</table>
+	<table class="showDivider"></table>
 	</div>
-    <div class="podcastChannelVideos">
-		<table>
-			<tr>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			</tr>
-		</table>
 	</div>
-    <div class="podcastChannelVideos">
-		<table>
-			<tr>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="podcastTitle">PODCAST TITLE
-				<iframe width="320" height="180" src="https://www.youtube.com/embed/lkAJGhpnPLw " frameborder="0" allowfullscreen></iframe>
-				</th>
-			</tr>
-		</table>
-	</div>
-    </div>-->
-</div>

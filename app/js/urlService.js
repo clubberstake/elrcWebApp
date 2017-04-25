@@ -85,22 +85,16 @@ app.factory('UrlService', ['$http', function($http) {
         return promise;
     };
 
-    var getHomepage = function(name) {
-        console.log(baseUrl + '/home/featuredPodcasts');
-
-        var promise = $http.get(baseUrl + '/home/featuredPodcasts').success(function(data) {
-            return data;
-        });
-
-        return promise;
-    };
-
     var getShowPage = function(name) {
-        console.log(baseUrl + '/shows/artistShow');
+        console.log(baseUrl + 'shows/artistShow');
 
-        var promise = $http.get(baseUrl + '/shows/artistShow').success(function(data) {
+        var promise = $http.get(baseUrl + 'shows/artistShow').success(function(data) {
             return data;
         });
+
+         var promiseHome = $http.get(baseUrl + 'home/featuredPodcasts').success(function(data) {
+                 return data;
+         });
 
         return promise;
     };
@@ -109,7 +103,6 @@ app.factory('UrlService', ['$http', function($http) {
         console.log(baseUrl + 'artists/all_artists');
 
         var promise = $http.get(baseUrl + 'artists/all_artists').success(function(data) {
-
             return data;
         });
 
@@ -125,7 +118,6 @@ app.factory('UrlService', ['$http', function($http) {
         postNewPodcastInfo: postNewPodcastInfo,
         getNewArtistInfo: getNewArtistInfo,
         postNewArtistInfo: postNewArtistInfo,
-        getHomepage: getHomepage,
         getShowPage: getShowPage,
         getArtistPage: getArtistPage,
     }
