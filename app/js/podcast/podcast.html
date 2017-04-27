@@ -1,66 +1,66 @@
    <div ng-repeat="show in shows">
-   <table id="showPodcastTableHeader">
+    <table id="showPodcastTableHeader">
         <tr>
             <th class="showPodcastHeader">{{show.showName}}</th>
-        <tr>
+            <tr>
     </table>
-   
-   <table class="podcastAlignmentTable" >
-    <th class="podcastColumnAlign">
-    <div class="podcastProfilePicContainer">
-        <img ng-src={{show.showImage}} alt="Artist Picture" class="podcastPic" width="250" height="250">
-    </div>
-    </th>
-    <th class="podcastColumnAlign" align="left">
-    <table id="podcastDescriptionTable" margin-top=5%;>
-        <tr>
-            <th class="podcastFeaturing">Featuring.... </th>
-            <th class="podcastName">{{show.djName}} </th>
-        </tr>
-        <tr>
-            <th colspan="2" rowspan="5" class="podcastDescription">{{show.showDesc}}</th>
-        </tr>
+
+    <table class="podcastAlignmentTable">
+        <th class="podcastColumnAlign">
+            <div class="podcastProfilePicContainer">
+                <img ng-src={{show.showImage}} alt="Artist Picture" class="podcastPic" width="250" height="250">
+            </div>
         </th>
-    </table>
+        <th class="podcastColumnAlign" align="left">
+            <table id="podcastDescriptionTable" margin-top=5%;>
+                <tr>
+                    <th class="podcastFeaturing">Featuring.... </th>
+                    <th class="podcastName">{{show.djName}} </th>
+                </tr>
+                <tr>
+                    <th colspan="2" rowspan="5" class="podcastDescription">{{show.showDesc}}</th>
+                </tr>
+        </th>
+        </table>
     </table>
 
     <table id="podcastTableHeader">
         <tr>
             <th class="podcastHeader"> CHANNEL VIDEOS </th>
-        <tr>
+            <tr>
     </table>
 
-	<div>
-	 <table class="mainBioVideoHeader">
-        <tr>
-            <th class="mainBioVideoTitle"> {{show.podcastTitle}}</th>
-        <tr>
-    </table>
-	</div>
+    <div>
+        <table class="mainBioVideoHeader">
+            <tr>
+                <th class="mainBioVideoTitle"> {{show.podcastTitle}}</th>
+                <tr>
+        </table>
+    </div>
 
-	<div class="mainVideoContainer">
-		<div class="mainVideo" align="center">
-			<iframe  align="middle" width=569 height="320 " ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<table class="featuredDescription">
-        <tr>
-            <th class="featuredDescriptionBox">{{show.podcastDesc}}</th>
-        <tr>
-    </table>
+    <div class="mainVideoContainer">
+        <div class="mainVideo" align="center">
+            <iframe align="middle" width=569 height="320 " ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <table class="featuredDescription">
+            <tr>
+                <th class="featuredDescriptionBox">{{show.podcastDesc}}</th>
+                <tr>
+        </table>
 
-    <table ng-repeat="show in shows | limitTo: 1">
-			<tr>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			</tr>
-		</table>
-	<table class="showDivider"></table>
-	</div>
-	</div>
+        <table ng-repeat="show in shows | limitTo: 1">
+            <tr>
+                <th id="featuredPodcastTitle">{{show.podcastTitle}}
+                    <iframe width="320" height="180" ng-src="{{leftPodcastVideo}}" frameborder="0" allowfullscreen></iframe>
+                </th>
+                <th id="featuredPodcastTitle">{{show.podcastTitle}}
+                    <iframe width="320" height="180" ng-src="{{middlePodcastVideo}}" frameborder="0" allowfullscreen></iframe>
+                </th>
+                <th id="featuredPodcastTitle">{{show.podcastTitle}}
+                    <iframe width="320" height="180" ng-src="{{rightPodcastVideo}}" frameborder="0" allowfullscreen></iframe>
+                </th>
+            </tr>
+        </table>
+        <table class="showDivider"></table>
+    </div>
+</div>

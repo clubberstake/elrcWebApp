@@ -1,44 +1,45 @@
 <div>
-	 <table class="homeTableHeader">
-        <tr>
-            <th class="homeHeader"> THE FEATURED PODCASTS </th>
-        <tr>
-    </table>
-	</div>
+	<table class="homeTableHeader">
+		<tr>
+			<th class="homeHeader"> THE FEATURED PODCASTS </th>
+			<tr>
+	</table>
+</div>
 
-	<div>
-	 <table class="featuredHeader"
-        <tr>
-            <th class="featuredTitle" ng-repeat="show in shows | limitTo: 1">{{show.podcastTitle}}</th>
-        <tr>
-    </table>
-	</div>
+<div>
+	<table class="featuredHeader" <tr>
+		<th class="featuredTitle">{{mainFeaturedTitle}}</th>
+		<tr>
+	</table>
+</div>
 
-	<div ="featuredVideoContainer" ng-repeat="show in shows | limitTo: 1">
-		<div class="featuredVideo" align="center">
-			<iframe  align="middle" width=569 height="320 " ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-		</div>
-		<table class="featuredDescription">
-        <tr>
-            <th class="featuredDescriptionBox"><p>{{show.podcastDesc}}</p></th>
-        <tr>
-    </table>
+<div="featuredVideoContainer">
+	<div class="featuredVideo" align="center">
+		<iframe align="middle" width="569" height="320" ng-src="{{mainFeatured}}" frameborder="0" allowfullscreen></iframe>
+	</div>
+	<table class="featuredDescription">
+		<tr>
+			<th class="featuredDescriptionBox">
+				<p>{{mainFeaturedDesc}}</p>
+			</th>
+			<tr>
+	</table>
 	</div>
 
 	<div class="featuredHomepageContainer" align="center">
-    <div class="featuredHomepageVideos">
-		<table ng-repeat="show in shows | limitTo: 1">
-			<tr>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			<th id="featuredPodcastTitle">{{show.podcastTitle}}
-				<iframe width="320" height="180" ng-src="{{show.embeddedURL}}" frameborder="0" allowfullscreen></iframe>
-				</th>
-			</tr>
-		</table>
-	</div>
+		<div class="featuredHomepageVideos">
+			<table>
+				<tr>
+					<th id="featuredPodcastTitle">{{bottomLeftTitle}}
+						<iframe width="320" height="180" ng-src="{{bottomLeftFeatured}}" frameborder="0" allowfullscreen></iframe>
+					</th>
+					<th id="featuredPodcastTitle">{{bottomMiddleTitle}}
+						<iframe width="320" height="180" ng-src="{{bottomMiddleFeatured}}" frameborder="0" allowfullscreen></iframe>
+					</th>
+					<th id="featuredPodcastTitle">{{bottomRightTitle}}
+						<iframe width="320" height="180" ng-src="{{bottomRightFeatured}}" frameborder="0" allowfullscreen></iframe>
+					</th>
+				</tr>
+			</table>
+		</div>
 	</div>
