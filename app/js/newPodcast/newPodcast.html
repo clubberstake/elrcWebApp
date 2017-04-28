@@ -7,17 +7,18 @@
 
   <h3 class="title">Podcast</h3>
   <div class=choice>
-<input type="radio" name = "newEdit" value = "New" ng-model="isEditingArtist" ng-value="false"/> New
-<input type="radio" name = "newEdit" value = "Edit" ng-model="isEditingArtist" ng-value="true"/> Edit <br/>
+<input type="radio" name = "newEdit" value = "New" ng-model="isEditingPodcast" ng-value="false"/> New
+<input type="radio" name = "newEdit" value = "Edit" ng-model="isEditingPodcast" ng-value="true"/> Edit <br/>
 
-<span ng-show = "isEditingArtist">Podcast to edit:</span>
-          <select ng-show="isEditingArtist">
+<span ng-show = "isEditingPodcast">Podcast to edit:</span>
+          <select ng-show="isEditingPodcast">
           <option value="" disabled selected>Podcast Not Chosen</option>
           <option value=artist1>Podcast 1 </option>
           <option value=artist2>Podcast 2 </option>
           <option value=artist3>Podcast 3 </option>
         </select>
 </div>
+<form>
   <div class=label> 
     <table class=newInfo>
       <tr>
@@ -59,5 +60,11 @@
     <input id=create type="submit" ng-value="checkOKButton()"/>
     <input id=reset type="reset" value="Clear"/>
 </div>
+</form>
 
-<script> function noShow{alert("Each Podcast must have Show");}</script>
+
+<script> function noShow(){alert("Each Podcast must have Show");}</script>
+
+
+
+<!--sajdf;kldsjfdajlkfl;jl;asjf;-->
