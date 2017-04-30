@@ -14,9 +14,9 @@
 <span ng-show="isEditingArtist">Artist to edit:</span>
           <select ng-show="isEditingArtist">
           <option value="" disabled selected>Artist Not Chosen</option>
-          <option value=artist1>Artist 1 </option>
-          <option value=artist2>Artist 2 </option>
-          <option value=artist3>Artist 3 </option>
+          <class ng-repeat="artist in artists">
+          <option value=artist1>{{artist.artistName}}</option>
+          </class>
         </select>
 </div>
 <form>
@@ -24,14 +24,10 @@
     <tr>
  <div class=label> 
    <td id=fName>
-        Artist First Name:
+        Artist Full Name:
         <input type = "text" name= "artistFName" class= "fText" maxlength="30" placeholder="Enter Artist First Name"/>
     </td>
           <td></td>
-    <td id=lName>
-      Artist Last Name: 
-      <input type = "text" name= "lName" class= "lText" maxlength="30" placeholder="Enter Artist Last Name"/>
-    </td>
 </div>
     </tr>
     <tr>

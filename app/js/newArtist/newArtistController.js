@@ -1,8 +1,15 @@
-app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$window',
-    function($scope, newArtistService, $location, $log, $window) {
+app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$window', '$sce',
+    function($scope, newArtistService, $location, $log, $window, $sce) {
 
         var vm = $scope;
-        newArtistService.getNewArtistInfo();
+        newArtistService.getArtistPage().then(function(promise) {
+            $scope.artists = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.artists.length; i++){
+                 $scope.artists[i].djImage = $sce.trustAsResourceUrl($scope.artists[i].djImage);
+            }
+            console.log($scope.artists);
+        })
 
         vm.filter = function(key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -29,18 +36,16 @@ app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$w
 
 app.factory('newArtistService', ['UrlService', function(UrlService) {
 
-    var getNewArtistInfo = function() {
-        UrlService.getNewArtistInfo().then(function(promise) {
-            console.log(promise.data);
-        })
+    var getArtistPage = function() {
+        return UrlService.getArtistPage();
     };
 
     var postNewArtistInfo = function(someJsonData) {
-        UrlService.postNewArtistInfo(someJsonData);
+        return UrlService.postNewArtistInfo();
     };
 
     return {
-        getNewArtistInfo: getNewArtistInfo,
+        getArtistPage: getArtistPage,
         postNewArtistInfo: postNewArtistInfo,
     }
 

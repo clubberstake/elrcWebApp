@@ -1,8 +1,15 @@
-app.controller('newPodcastController', ['$scope', 'newPodcastController', '$log', '$window',
-    function ($scope, newPodcastService, $location, $log, $window) {
+app.controller('newPodcastController', ['$scope', 'newPodcastService', '$log', '$window', '$sce',
+    function ($scope, newPodcastService, $location, $log, $window, $sce) {
 
         var vm = $scope;
-        newPodcastService.getNewPodcastInfo();
+        newPodcastService.getNewPodcastInfo().then(function(promise) {
+            $scope.artists = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.artists.length; i++){
+                 $scope.artists[i].djImage = $sce.trustAsResourceUrl($scope.artists[i].djImage);
+            }
+            console.log($scope.artists);
+        });
 
         vm.filter = function (key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -29,13 +36,11 @@ app.controller('newPodcastController', ['$scope', 'newPodcastController', '$log'
 app.factory('newPodcastService', ['UrlService', function (UrlService) {
 
     var getNewPodcastInfo = function () {
-        UrlService.getNewPodcastInfo().then(function (promise) {
-            console.log(promise.data);
-        })
+       return UrlService.getNewPodcastInfo();
     };
 
     var postNewPodcastInfo = function (someJsonData) {
-        UrlService.postNewPodcastInfo(someJsonData);
+        UrlService.postNewPodcastInfo();
     };
 
     return {
