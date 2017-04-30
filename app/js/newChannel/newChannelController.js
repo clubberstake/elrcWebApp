@@ -1,8 +1,15 @@
-app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '$window',
-    function ($scope, newChannelService, $location, $log, $window) {
+app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '$window', '$sce',
+    function ($scope, newChannelService, $log, $window, $sce) {
 
         var vm = $scope;
-        newChannelService.getNewShowInfo();
+        newChannelService.getShowPage().then(function(promise) {
+            $scope.shows = promise.data;
+            var i = 0;
+            for (i = 0; i < $scope.shows.length; i++){
+                 $scope.shows[i].showName = $sce.trustAsResourceUrl($scope.shows[i].showName);
+            }
+            console.log($scope.shows);
+        })
 
         vm.filter = function (key) {
             $log.log('Requested filtering on key: "' + key + '"');
@@ -28,18 +35,16 @@ app.controller('newChannelController', ['$scope', 'newChannelService', '$log', '
 
 app.factory('newChannelService', ['UrlService', function (UrlService) {
 
-    var getNewShowInfo = function () {
-        UrlService.getNewShowInfo().then(function (promise) {
-            console.log(promise.data);
-        })
+    var getShowPage = function () {
+        return UrlService.getShowPage();
     };
 
     var postNewShowInfo = function(someJsonData){
-        UrlService.postNewShowInfo(someJsonData);
+      return  UrlService.postNewShowInfo(someJsonData);
     };
 
     return {
-        getNewShowInfo: getNewShowInfo,
+        getShowPage: getShowPage,
         postNewShowInfo:postNewShowInfo
     }
 

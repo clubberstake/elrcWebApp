@@ -1,14 +1,14 @@
 app.controller('newPodcastController', ['$scope', 'newPodcastService', '$log', '$window', '$sce',
-    function ($scope, newPodcastService, $location, $log, $window, $sce) {
+    function ($scope, newPodcastService, $log, $window, $sce) {
 
         var vm = $scope;
-        newPodcastService.getNewPodcastInfo().then(function(promise) {
-            $scope.artists = promise.data;
+        newPodcastService.getArchivePodcasts().then(function(promise) {
+            $scope.archive = promise.data;
             var i = 0;
-            for (i = 0; i < $scope.artists.length; i++){
-                 $scope.artists[i].djImage = $sce.trustAsResourceUrl($scope.artists[i].djImage);
+            for (i = 0; i < $scope.archive.length; i++){
+                 $scope.archive[i].podcastName = $sce.trustAsResourceUrl($scope.archive[i].podcastName);
             }
-            console.log($scope.artists);
+            console.log($scope.archive);
         });
 
         vm.filter = function (key) {
@@ -35,8 +35,8 @@ app.controller('newPodcastController', ['$scope', 'newPodcastService', '$log', '
 
 app.factory('newPodcastService', ['UrlService', function (UrlService) {
 
-    var getNewPodcastInfo = function () {
-       return UrlService.getNewPodcastInfo();
+    var getArchivePodcasts = function () {
+       return UrlService.getArchivePodcasts();
     };
 
     var postNewPodcastInfo = function (someJsonData) {
@@ -44,7 +44,7 @@ app.factory('newPodcastService', ['UrlService', function (UrlService) {
     };
 
     return {
-        getNewPodcastInfo: getNewPodcastInfo,
+        getArchivePodcasts: getArchivePodcasts,
         postNewPodcastInfo: postNewPodcastInfo
     }
 

@@ -12,9 +12,7 @@
 <span ng-show="isEditingArtist">Show to edit: </span>
           <select ng-show="isEditingArtist">
           <option value="" disabled selected>Show Not Chosen</option>
-          <option value=artist1>Show 1 </option>
-          <option value=artist2>Show 2 </option>
-          <option value=artist3>Show 3 </option>
+          <option value=artist1 ng-repeat="show in shows">{{show.showName}} </option>
         </select>
 </div>
 <form>
@@ -69,7 +67,7 @@
   </tr>
    <tr>
         <td>
-            Choose Show image(.png or .jpg): &nbsp;  <input type=file id=img  accept= "image/jpeg, image/png"/>
+            Choose Show Image: &nbsp;  <input type=text id=img placeholder="Enter image link"> 
         </td>
     </tr>
 </table>

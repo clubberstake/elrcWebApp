@@ -5,7 +5,7 @@ app.factory('UrlService', ['$http', function ($http) {
     var getNewArtistInfo = function (id) {
         console.log(baseUrl + 'artist/all_artists');
 
-        var promise = $http.get(baseUrl + 'artist/all_artists').success(function (data) {
+        var promise = $http.get(baseUrl + 'admin/newArtist').success(function (data) {
             return data;
         });
 

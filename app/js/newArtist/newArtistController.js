@@ -1,5 +1,5 @@
 app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$window', '$sce',
-    function($scope, newArtistService, $location, $log, $window, $sce) {
+    function($scope, newArtistService, $log, $window, $sce) {
 
         var vm = $scope;
         newArtistService.getArtistPage().then(function(promise) {
@@ -36,8 +36,8 @@ app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$w
 
 app.factory('newArtistService', ['UrlService', function(UrlService) {
 
-    var getArtistPage = function() {
-        return UrlService.getArtistPage();
+    var getArtistPage  = function() {
+        return UrlService.getArtistPage ();
     };
 
     var postNewArtistInfo = function(someJsonData) {
@@ -45,7 +45,7 @@ app.factory('newArtistService', ['UrlService', function(UrlService) {
     };
 
     return {
-        getArtistPage: getArtistPage,
+        getArtistPage : getArtistPage ,
         postNewArtistInfo: postNewArtistInfo,
     }
 

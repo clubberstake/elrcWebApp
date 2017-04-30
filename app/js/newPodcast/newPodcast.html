@@ -13,9 +13,7 @@
 <span ng-show = "isEditingPodcast">Podcast to edit:</span>
           <select ng-show="isEditingPodcast">
           <option value="" disabled selected>Podcast Not Chosen</option>
-          <option value=artist1>Podcast 1 </option>
-          <option value=artist2>Podcast 2 </option>
-          <option value=artist3>Podcast 3 </option>
+          <option value=artist1 ng-repeat="podcast in archive">{{podcast.podcastName}} </option>
         </select>
 </div>
 <form>

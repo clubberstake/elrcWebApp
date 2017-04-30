@@ -14,9 +14,7 @@
 <span ng-show="isEditingArtist">Artist to edit:</span>
           <select ng-show="isEditingArtist">
           <option value="" disabled selected>Artist Not Chosen</option>
-          <class ng-repeat="artist in artists">
-          <option value=artist1>{{artist.artistName}}</option>
-          </class>
+          <option value=artist1 ng-repeat="artist in artists">{{artist.artistName}}</option>
         </select>
 </div>
 <form>
@@ -25,7 +23,7 @@
  <div class=label> 
    <td id=fName>
         Artist Full Name:
-        <input type = "text" name= "artistFName" class= "fText" maxlength="30" placeholder="Enter Artist First Name"/>
+        <input type = "text" name= "artistFName" class= "fText" maxlength="30" placeholder="Enter Artist Full Name"/>
     </td>
           <td></td>
 </div>
@@ -44,7 +42,7 @@
     </tr>
     <tr>
         <td>
-            Choose DJ image(.png or .jpg): &nbsp;  <input type=file id=img  accept= "image/jpeg, image/png"/>
+            Choose DJ Image &nbsp;  <input type=text id=img placeholder="Enter image link">
         </td>
     </tr>
   
