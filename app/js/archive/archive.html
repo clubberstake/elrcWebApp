@@ -13,22 +13,23 @@
         <div class="archive-filter-dropdown-item" ng-click="filter('oldest-to-newest')">Oldest to Newest</div>
     </div>
 </div>
-   
-        <table ng-repeat="podcast in archive">
-    <th class= "arhiveColumnAlign">
-        <table class ="archiveAlighnTable" margin-top=5%>
 
-            <tr>
-                <th id="podcastTitle">{{podcast.podcastName}}
-                    <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
+<div>
+    <table ng-repeat="podcast in archive">
+        <th>
+            <table class="archiveAlignTable" margin-top=5%>
+
+                <tr>
+                    <th id="podcastTitle">{{podcast.podcastName}}
+                        <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
                     </th>
-                <th id="podcastTitle">{{podcast.podcastName}}
-                    <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
+                    <th id="podcastTitle">{{podcast.podcastName}}
+                        <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
                     </th>
-                <th id="podcastTitle">{{podcast.podcastName}}
-                    <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
+                    <th id="podcastTitle">{{podcast.podcastName}}
+                        <iframe width="320" height="180" ng-src="{{podcast.podcastThumbnail}}" frameborder="0" allowfullscreen></iframe>
                     </th>
         </th>
         </table>
-        </table>
-    
+    </table>
+</div>

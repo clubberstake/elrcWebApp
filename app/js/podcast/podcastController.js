@@ -9,11 +9,11 @@ app.controller('PodcastController', ['$scope', 'PodcastService', '$log', '$windo
                 $scope.shows[i].showImage = $sce.trustAsResourceUrl($scope.shows[i].showImage);
                 $scope.shows[i].embeddedURL = $sce.trustAsResourceUrl($scope.shows[i].embeddedURL);
             }
-
-            $scope.leftPodcastVideo = $sce.trustAsResourceUrl($scope.shows[1].embeddedURL);
-            $scope.middlePodcastVideo = $sce.trustAsResourceUrl($scope.shows[1].embeddedURL);
-            $scope.rightPodcastVideo = $sce.trustAsResourceUrl($scope.shows[1].embeddedURL);
-
+            for (i = 0; i < $scope.shows.length; i++) {
+                $scope.leftPodcastVideo = $sce.trustAsResourceUrl($scope.shows[i].embeddedURL);
+                $scope.middlePodcastVideo = $sce.trustAsResourceUrl($scope.shows[i].embeddedURL);
+                $scope.rightPodcastVideo = $sce.trustAsResourceUrl($scope.shows[i].embeddedURL);
+            }
             console.log($scope.shows);
         });
 
