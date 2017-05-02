@@ -34,6 +34,14 @@ app.controller('newArtistController', ['$scope', 'newArtistService', '$log', '$w
 ]);
 
 
+
+app.controller('chooseArtist', function($scope){
+    var dropdown = document.getElementById(dropdown);
+    var nameField = document.getElementById(nameField);
+
+    
+});
+
 app.factory('newArtistService', ['UrlService', function(UrlService) {
 
     var getArtistPage  = function() {
